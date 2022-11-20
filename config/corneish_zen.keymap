@@ -26,10 +26,10 @@
 // |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-        &kp Q &kp W &kp F &kp P &kp B           &kp J &kp L  &kp U     &kp Y   &kp SQT
-        &kp A &kp R &kp S &kp T &kp G           &kp M &kp N  &kp E     &kp I   &kp O
-        &kp Z &kp X &kp C &kp D &kp V           &kp K &kp H  &kp COMMA &kp DOT &kp QMARK
-        &kp LGUI &lt NUMPAD LSHFT &kp SPACE           &lt CURSOR RET &mo NUMBER &mo SYMBOL
+        &kp Q &kp W &kp F &kp P &kp B                           &kp J &kp L  &kp U     &kp Y   &kp SQT
+        &mt LSHFT A &mt LCTRL R &mt LALT S &mt LGUI T &kp G     &kp M &mt LGUI N  &mt LALT E     &mt LCTRL I   &mt LSHFT O
+        &kp Z &kp X &kp C &kp D &kp V                           &kp K &kp H  &kp COMMA &kp DOT &kp QMARK
+        &kp LGUI &lt NUMPAD LSHFT &kp SPACE                     &lt CURSOR RET &mo NUMBER &mo SYMBOL
                         >;
                 };
 
