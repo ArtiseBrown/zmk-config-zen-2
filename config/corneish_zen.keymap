@@ -29,7 +29,7 @@
         &kp Q &kp W &kp F &kp P &kp B                           &kp J &kp L  &kp U     &kp Y   &kp SQT
         &mt LSHFT A &mt LCTRL R &mt LALT S &mt LGUI T &kp G     &kp M &mt LGUI N  &mt LALT E     &mt LCTRL I   &mt LSHFT O
         &kp Z &kp X &kp C &kp D &kp V                           &kp K &kp H  &kp COMMA &kp DOT &kp QMARK
-        &kp LGUI &lt NUMPAD LSHFT &kp SPACE                     &lt CURSOR RET &mo NUMBER &mo SYMBOL
+        &kp LGUI &lt NUMPAD LSHFT &kp SPACE                     &lt CURSOR BSPC &mo NUMBER &mo SYMBOL
                         >;
                 };
 
@@ -44,7 +44,7 @@
         &kp ESC &kp TAB &none  &none  &none               &none   &none           &kp UP  &none   &none
         &none   &none   &none  &none  &none               &none   &kp LEFT        &kp DOWN  &kp RIGHT  &none
         &none   &none   &none  &none  &none               &none   &none           &none  &none  &none
-                &kp LGUI        &trans  &kp BSPC        &kp RET &trans          &kp RALT
+                &kp LGUI        &trans  &kp RET        &kp RET &trans          &kp RALT
                         >;
                 };
 
