@@ -29,7 +29,7 @@
         &kp Q &kp W &kp F &kp P &kp B           &kp J &kp L  &kp U     &kp Y   &kp SQT
         &kp A &kp R &kp S &kp T &kp G           &kp M &kp N  &kp E     &kp I   &kp O
         &kp Z &kp X &kp C &kp D &kp V           &kp K &kp H  &kp COMMA &kp DOT &kp QMARK
-        &kp LGUI &mo NUMPAD &kp SPACE           &lt CURSOR RET &mo NUMBER &mo SYMBOL
+        &kp LGUI &lt NUMPAD LSHFT &kp SPACE           &lt CURSOR RET &mo NUMBER &mo SYMBOL
                         >;
                 };
 
@@ -41,9 +41,9 @@
 // |BTCLR|     |     |     |     |   |     |     |     |     |     |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-        &none  &none  &none  &none  &none               &none   &none           &kp UP  &none   &none
-        &none  &none  &none  &none  &none               &none   &kp LEFT        &kp DOWN  &kp RIGHT  &none
-        &none  &none  &none  &none  &none               &none   &none           &none  &none  &none
+        &kp ESC &kp TAB &none  &none  &none               &none   &none           &kp UP  &none   &none
+        &none   &none   &none  &none  &none               &none   &kp LEFT        &kp DOWN  &kp RIGHT  &none
+        &none   &none   &none  &none  &none               &none   &none           &none  &none  &none
                 &kp LGUI        &trans  &kp BSPC        &kp RET &trans          &kp RALT
                         >;
                 };
