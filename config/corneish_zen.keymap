@@ -2,6 +2,12 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define DEFAULT 0
+#define CURSOR  1
+#define NUMPAD  2
+#define NUMBER  3
+#define SYMBOL  4
+
 / {
   chosen {
     zmk,matrix_transform = &five_column_transform;
@@ -20,10 +26,10 @@
 // |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-        &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SQT
-        &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp O
-        &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp QMARK
-                  &kp LGUI &mo 2 &kp SPACE   &lt 1 RET &mo 3 &mo 4
+        &kp Q &kp W &kp F &kp P &kp B           &kp J &kp L  &kp U     &kp Y   &kp SQT
+        &kp A &kp R &kp S &kp T &kp G           &kp M &kp N  &kp E     &kp I   &kp O
+        &kp Z &kp X &kp C &kp D &kp V           &kp K &kp H  &kp COMMA &kp DOT &kp QMARK
+        &kp LGUI &mo NUMPAD &kp SPACE           &lt CURSOR RET &mo NUMBER &mo SYMBOL
                         >;
                 };
 
@@ -35,10 +41,10 @@
 // |BTCLR|     |     |     |     |   |     |     |     |     |     |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-        &trans  &trans  &trans  &trans  &kp N1          &trans  &kp N1  &kp N1  &kp N1  &trans
-        &trans  &trans  &trans  &trans  &trans          &trans  &kp N1  &kp N1  &kp N1  &trans
-        &trans  &trans  &trans  &trans  &trans          &kp N1  &kp N1  &kp N1  &kp N1  &trans
-                &kp LGUI        &trans  &kp BSPC       &kp RET &trans   &kp RALT
+        &none  &none  &none  &none  &none               &none   &none           &kp UP  &none   &none
+        &none  &none  &none  &none  &none               &none   &kp LEFT        &kp DOWN  &kp RIGHT  &none
+        &none  &none  &none  &none  &none               &none   &none           &none  &none  &none
+                &kp LGUI        &trans  &kp BSPC        &kp RET &trans          &kp RALT
                         >;
                 };
 
