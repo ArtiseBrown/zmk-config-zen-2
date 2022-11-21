@@ -29,7 +29,7 @@
         &kp Q   &kp W   &kp F   &kp P   &kp B           &kp J           &kp L           &kp U           &kp Y           &kp SQT
         &kp A   &kp R   &kp S   &kp T   &kp G           &kp M           &kp N           &mk E           &mk I           &mk  O
         &kp Z   &kp X   &kp C   &kp D   &kp V           &kp K           &kp H           &kp COMMA       &kp DOT         &kp QMARK
-        &mo NUMBER      &lt NUMPAD LSHFT &kp SPACE      &lt CURSOR BSPC &mo NUMPAD      &mo SYMBOL
+        &mo NUMBER      &kp LSHFT       &kp SPACE       &lt CURSOR BSPC &mo NUMPAD      &mo SYMBOL
                         >;
                 };
 
@@ -43,7 +43,7 @@
                         bindings = <
         &kp ESC         &kp TAB         &none           &none           &none           &none           &none           &kp UP          &none           &none
         &kp LSHFT       &kp LALT        &kp LCTRL       &kp LGUI        &none           &none           &kp LEFT        &kp DOWN        &kp RIGHT       &none
-        &none           &kp LCTRL(X)    &kp LCTRL(C)    &kp LCTRL(V)    &none           &none           &none           &none           &none           &none
+        &none           &kp LC(X)       &kp LC(C)       &kp LC(V)       &none           &none           &none           &none           &none           &none
                                         &kp LGUI        &trans          &kp RET         &none           &trans          &kp RALT
                         >;
                 };
