@@ -21,15 +21,15 @@
                 default_layer {
                         label = "COLEMK";
 // -----------------------------------------------------------------------------------------
-// |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |
-// |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |
-// |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |
+// |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  '  |
+// |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |
+// |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  ?  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-        &kp Q &kp W &kp F &kp P &kp B                           &kp J &kp L  &kp U     &kp Y   &kp SQT
-        &mt LSHFT A &mt LCTRL R &mt LALT S &mt LGUI T &kp G     &kp M &mt LGUI N  &mt LALT E     &mt LCTRL I   &mt LSHFT O
-        &kp Z &kp X &kp C &kp D &kp V                           &kp K &kp H  &kp COMMA &kp DOT &kp QMARK
-        &kp LGUI &lt NUMPAD LSHFT &kp SPACE                     &lt CURSOR BSPC &mo NUMBER &mo SYMBOL
+        &kp Q   &kp W   &kp F   &kp P   &kp B           &kp J           &kp L           &kp U           &kp Y           &kp SQT
+        &kp A   &kp R   &kp S   &kp T   &kp G           &kp M           &kp N           &mk E           &mk I           &mk  O
+        &kp Z   &kp X   &kp C   &kp D   &kp V           &kp K           &kp H           &kp COMMA       &kp DOT         &kp QMARK
+        &mo NUMBER      &lt NUMPAD LSHFT &kp SPACE      &lt CURSOR BSPC &mo NUMPAD      &mo SYMBOL
                         >;
                 };
 
@@ -41,10 +41,10 @@
 // |BTCLR|     |     |     |     |   |     |     |     |     |     |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-        &kp ESC &kp TAB &none  &none  &none               &none   &none           &kp UP  &none   &none
-        &none   &none   &none  &none  &none               &none   &kp LEFT        &kp DOWN  &kp RIGHT  &none
-        &none   &none   &none  &none  &none               &none   &none           &none  &none  &none
-                &kp LGUI        &trans  &kp RET        &kp RET &trans          &kp RALT
+        &kp ESC         &kp TAB         &none           &none           &none           &none           &none           &kp UP          &none           &none
+        &kp LSHFT       &kp LALT        &kp LCTRL       &kp LGUI        &none           &none           &kp LEFT        &kp DOWN        &kp RIGHT       &none
+        &none           &kp LCTRL(X)    &kp LCTRL(C)    &kp LCTRL(V)    &none           &none           &none           &none           &none           &none
+                                        &kp LGUI        &trans          &kp RET         &none           &trans          &kp RALT
                         >;
                 };
 
