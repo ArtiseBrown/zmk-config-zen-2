@@ -14,21 +14,29 @@
   };
 };
 
-#define COMBO(NAME, KEYPOS) \
-    combo_##NAME { \
-        timeout-ms = <100>; \
-        key-positions = <KEYPOS>; \
-        bindings = <NAME>; \
-    };
+// #define COMBO(NAME, KEYPOS) \
+//     combo_##NAME { \
+//         timeout-ms = <100>; \
+//         key-positions = <KEYPOS>; \
+//         bindings = <NAME>; \
+//     };
+
+// / {
+// combos {
+//         compatible = "zmk,combos"; \
+//         COMBO (&kp' 'ESC, 0 1) \
+//         COMBO (&kp' 'TAB, 1 2) \
+//         COMBO (&my_macro, 21, 22) \
+//     };
 
 / {
-combos {
-        compatible = "zmk,combos"; \
-        COMBO (&kp' 'ESC, 0 1) \
-        COMBO (&kp' 'TAB, 1 2) \
-        COMBO (&my_macro, 21, 22) \
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {timeout-ms = <50>; key-positions = <0 1>; bindings = <&kp ESC>;};
+        combo_esc {timeout-ms = <50>; key-positions = <1 2>; bindings = <&kp TAB>;};
+        combo_esc {timeout-ms = <50>; key-positions = <21 22>; bindings = <&my_macro>;};
     };
-
+};
 
 macros {
         ZMK_MACRO(my_macro,
