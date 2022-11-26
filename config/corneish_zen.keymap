@@ -18,10 +18,17 @@
     combo_##NAME { \
         timeout-ms = <100>; \
         key-positions = <KEYPOS>; \
-        bindings = <&kp NAME>; \
+        bindings = <NAME>; \
     };
 
 / {
+combos {
+        compatible = "zmk,combos"; \
+        COMBO (&kp ESC, 0 1) \
+        COMBO (&kp TAB, 1 2) \
+        COMBO (&my_macro, 21, 22) \
+    };
+
 
 macros {
         ZMK_MACRO(my_macro,
@@ -29,13 +36,6 @@ macros {
             tap-ms = <10>;
             bindings = <&kp Z &kp M &kp K>;
         )
-    };
-
-combos {
-        compatible = "zmk,combos"; \
-           COMBO (ESC, 0 1) \
-           COMBO (TAB, 1 2) \
-           COMBO (my_macro, 21 22) \
     };
 
 // {
