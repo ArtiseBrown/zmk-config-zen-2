@@ -24,13 +24,6 @@
     };
 };
 
-/* / {
-    combos {
-        compatible = "zmk,combos";
-        combo_tab {timeout-ms = <50>; key-positions = <1 2>;bindings = <&kp PERCENT>;};
-    };
-}; */
-
 
 / {
     macros {
@@ -58,7 +51,7 @@
                         bindings = <
         &kp Q   &kp W   &kp F   &kp P   &kp B           &kp J           &kp L           &kp U           &kp Y           &kp SQT
         &kp A   &kp R   &kp S   &kp T   &kp G           &kp M           &kp N           &kp E           &kp I           &kp  O
-        &kp Z   &kp X   &kp C   &kp D   &kp V           &kp K           &kp H           &kp COMMA       &kp DOT         &kp QMARK
+        &kp Z   &kp X   &kp C   &kp D   &kp V           &kp K           &kp H           &kp COMMA       &kp DOT         &mt LS(FSLH) QMlARK
         &mo NUMBER      &kp LSHFT       &kp SPACE       &lt CURSOR BSPC &mo NUMPAD      &mo SYMBOL
                         >;
                 };
