@@ -26,19 +26,24 @@
         compatible = "zmk,combos";
            COMBO(ESC, 0 1) \
            COMBO(TAB, 1 2) \
-           COMBO(my_macro, 21 22) \
+           COMBO(zed_em_kay, 21 22) \
     };
 
 };
 
 / {
-        macros {
-                ZMK_MACRO(my_macro, \
-                wait-ms = <30>; \
-                tap-ms = <40>; \
-                bindings = <&kp Z &kp M &kp K>; \
-                )
+    macros {
+        zed_em_kay: zed_em_kay {
+            label = "ZM_zed_em_kay";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp Z &kp M &kp K>
+                , <&macro_release &kp LSHFT>
+                ;
         };
+    };
 };
 
 
