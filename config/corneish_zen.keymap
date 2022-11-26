@@ -14,6 +14,17 @@
   };
 };
 
+/{
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp HASH>;
+        };
+    };
+};
+
 / {
         keymap {
                 compatible = "zmk,keymap";
