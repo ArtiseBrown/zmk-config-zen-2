@@ -24,9 +24,9 @@
 / {
 combos {
         compatible = "zmk,combos"; \
-        COMBO ((&kp ESC), 0 1) \
-        COMBO ((&kp TAB), 1 2) \
-        COMBO ((&my_macro), 21, 22) \
+        COMBO (&kp' 'ESC, 0 1) \
+        COMBO (&kp' 'TAB, 1 2) \
+        COMBO (&my_macro, 21, 22) \
     };
 
 
