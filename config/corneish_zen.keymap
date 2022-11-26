@@ -26,18 +26,19 @@
         compatible = "zmk,combos"; \
            COMBO (ESC, 0 1) \
            COMBO (TAB, 1 2) \
-           COMBO (my_macro, 21, 22)
     };
 
 
-//macros {
-        ZMK_MACRO(my_macro,
+macros {
+        ZMK_MACRO(inv_qm,
             wait-ms = <10>;
             tap-ms = <10>;
             bindings
-                = <&kp KP_Z &kp KP_M &kp KP_K>;
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N1 &kp KP_N6 &kp KP_N8>
+                , <&macro_release &kp LALT>;
         )
-//    };
+    };
 
 // {
         keymap {
