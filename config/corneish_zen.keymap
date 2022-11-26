@@ -14,20 +14,6 @@
   };
 };
 
-// #define COMBO(NAME, KEYPOS) \
-//     combo_##NAME { \
-//         timeout-ms = <100>; \
-//         key-positions = <KEYPOS>; \
-//         bindings = <NAME>; \
-//     };
-
-// / {
-// combos {
-//         compatible = "zmk,combos"; \
-//         COMBO (&kp' 'ESC, 0 1) \
-//         COMBO (&kp' 'TAB, 1 2) \
-//         COMBO (&my_macro, 21, 22) \
-//     };
 
 / {
     combos {
@@ -38,15 +24,19 @@
     };
 };
 
-macros {
-        ZMK_MACRO(my_macro,
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&kp Z &kp M &kp K>;
-        )
+/ {
+    macros {
+        my_macro: zed_em_kay {
+            label = "ZM_zed_em_kay";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp Z &kp M &kp K>;
+        };
     };
+};
 
-// {
+
+/ {
         keymap {
                 compatible = "zmk,keymap";
 
