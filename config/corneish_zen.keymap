@@ -19,15 +19,16 @@
     combos {
         compatible = "zmk,combos";
         combo_esc {timeout-ms = <50>; key-positions = <0 1>;bindings = <&kp HASH>;};
+        combo_tab {timeout-ms = <50>; key-positions = <1 2>;bindings = <&kp PERCENT>;};
     };
 };
 
-/ {
+/* / {
     combos {
         compatible = "zmk,combos";
         combo_tab {timeout-ms = <50>; key-positions = <1 2>;bindings = <&kp PERCENT>;};
     };
-};
+}; */
 
 
 / {
