@@ -14,18 +14,21 @@
   };
 };
 
-/{
-    combos {
-        compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp HASH>;
-        };
+#define COMBO(NAME, KEYPOS) \
+    combo_##NAME { \
+        timeout-ms = <100>; \
+        key-positions = <KEYPOS>; \
+        bindings = <&kp NAME>; \
     };
-};
 
 / {
+    combos {
+        compatible = "zmk,combos";
+           COMBO(ESC, 0 1)
+    };
+
+
+// {
         keymap {
                 compatible = "zmk,keymap";
 
