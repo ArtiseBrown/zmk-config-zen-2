@@ -23,11 +23,22 @@
 
 / {
     combos {
-        compatible = "zmk,combos";
-           COMBO(ESC, 0 1)
-           COMBO(TAB, 1 2)
+        compatible = "zmk,combos"; \
+           COMBO (ESC, 0 1) \
+           COMBO (TAB, 1 2) \
     };
 
+
+macros {
+        ZMK_MACRO(inv_qm,
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N1 &kp KP_N6 &kp KP_N8>
+                , <&macro_release &kp LALT>;
+        )
+    };
 
 // {
         keymap {
