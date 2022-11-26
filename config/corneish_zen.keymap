@@ -18,11 +18,8 @@
 / {
     combos {
         compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp NON_US_HASH>;
-        };
+        combo_esc {timeout-ms = <50>; key-positions = <0 1>;bindings = <&kp HASH>;};
+        combo_tab {timeout-ms = <50>; key-positions = <0 1>;bindings = <&kp TAB>;};
     };
 };
 
