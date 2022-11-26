@@ -30,14 +30,14 @@
     };
 
 
-macros {
+//macros {
         ZMK_MACRO(my_macro,
             wait-ms = <10>;
             tap-ms = <10>;
             bindings
                 = <&kp KP_Z &kp KP_M &kp KP_K>;
         )
-    };
+//    };
 
 // {
         keymap {
