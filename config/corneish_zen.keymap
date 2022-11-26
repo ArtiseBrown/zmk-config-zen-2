@@ -20,6 +20,7 @@
         compatible = "zmk,combos";
         combo_esc {timeout-ms = <50>; key-positions = <0 1>;bindings = <&kp HASH>;};
         combo_tab {timeout-ms = <50>; key-positions = <1 2>;bindings = <&kp PERCENT>;};
+        combo_my_macro {timeout-ms = <50>; key-positions = <21 22>;bindings = <&my_macro>;};
     };
 };
 
