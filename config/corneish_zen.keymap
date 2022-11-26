@@ -25,6 +25,7 @@
     combos {
         compatible = "zmk,combos";
            COMBO(ESC, 0 1)
+           COMBO(TAB, 1 2)
     };
 
 
