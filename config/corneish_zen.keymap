@@ -49,9 +49,9 @@
 // |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  ?  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-        &kp Q   &kp W   &kp F   &kp P   &kp B           &kp J           &kp L           &kp U           &kp Y           &kp SQT
+        &kp Q   &kp W   &kp F   &kp P   &kp B           &kp J           &kp L           &kp U           &kp Y           &mt DQT SQT
         &kp A   &kp R   &kp S   &kp T   &kp G           &kp M           &kp N           &kp E           &kp I           &kp  O
-        &kp Z   &kp X   &kp C   &kp D   &kp V           &kp K           &kp H           &kp COMMA       &kp DOT         &mt FSLH QMARK
+        &kp Z   &kp X   &kp C   &kp D   &kp V           &kp K           &kp H           &mt LT COMMA    &mt GT DOT      &mt FSLH QMARK
         &mo NUMBER      &kp LSHFT       &kp SPACE       &lt CURSOR BSPC &mo NUMPAD      &mo SYMBOL
                         >;
                 };
@@ -65,8 +65,8 @@
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
         &kp ESC         &kp TAB         &none           &none           &none           &none           &none           &kp UP          &none           &none
-        &sk LSHFT       &sk LALT        &sk LCTRL       &sk LGUI        &none           &none           &kp LEFT        &kp DOWN        &kp RIGHT       &none
-        &my_macro           &kp LC(X)       &kp LC(C)       &kp LC(V)       &none           &none           &none           &none           &none           &none
+        &sk LSHFT       &sk LALT        &sk LCTRL       &sk LGUI        &none           &kp PG_UP       &kp LEFT        &kp DOWN        &kp RIGHT       &kp HOME
+        &my_macro       &kp LC(X)       &kp LC(C)       &kp LC(V)       &none           &kp PG_DN       &none           &none           &none           &kp END
                                         &kp LGUI        &trans          &kp RET         &none           &trans          &kp RALT
                         >;
                 };
