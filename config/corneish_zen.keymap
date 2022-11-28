@@ -79,7 +79,7 @@ name: name##_macro {                  \
 		MACRO(vim_q,  &kp COLON &kp Q &kp EXCL)
 		MACRO(vim_s,  &kp COLON &kp W &kp Q)
 		MACRO(dir_up, &kp DOT &kp DOT &kp FSLH)
-                MACRO(wk_email, &kp a &kp r &kp t &kp i &kp s &kp e &kp B &kp r &kp o &kp w &kp)
+                MACRO(wk_email, &kp a &kp r &kp t &kp i &kp s &kp e &kp B &kp r &kp o &kp w)
 	};
 };
 
