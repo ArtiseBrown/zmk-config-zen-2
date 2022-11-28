@@ -15,25 +15,63 @@
 };
 
 
+/// {
+//    combos {
+//        compatible = "zmk,combos";
+//        combo_esc {timeout-ms = <50>; key-positions = <0 1>;bindings = <&kp HASH>;};
+//        combo_tab {timeout-ms = <50>; key-positions = <1 2>;bindings = <&kp PERCENT>;};
+//        combo_my_macro {timeout-ms = <50>; key-positions = <21 22>;bindings = <&my_macro>;};
+//    };
+//};
+
+
+/// {
+//    macros {
+//        my_macro: my_macro {
+//            label = "my_macro";
+//            compatible = "zmk,behavior-macro";
+//            #binding-cells = <0>;
+//            bindings = <&macro_tap &kp Z &kp M &kp K>;
+//        };
+//    };
+//};
+
 / {
-    combos {
-        compatible = "zmk,combos";
-        combo_esc {timeout-ms = <50>; key-positions = <0 1>;bindings = <&kp HASH>;};
-        combo_tab {timeout-ms = <50>; key-positions = <1 2>;bindings = <&kp PERCENT>;};
-        combo_my_macro {timeout-ms = <50>; key-positions = <21 22>;bindings = <&my_macro>;};
-    };
+	combos {
+		compatible = "zmk,combos";
+		COMBO(numb,   &tog NUM,     25 33)
+		COMBO(vol_up, &kp C_VOL_UP,  9 19)
+		COMBO(vol_dn, &kp C_VOL_DN, 19 29)
+		// invoke macros
+		COMBO(vim_q,  &vim_q,   0  1)
+		COMBO(vim_s,  &vim_s,  20 21)
+		COMBO(dir_up, &dir_up, 28 29)
+		// navigation
+		COMBO(nav_dn, &kp LS(LA(DARW)), 26 27)
+		COMBO(nav_up, &kp LS(LA(UARW)), 27 28)
+		// noop thumbs
+		COMBO(thmb_l, &none, 30 31)
+		COMBO(thmb_r, &none, 32 33)
+	};
 };
 
 
+#define MACRO(name, keys)             \
+name: name##_macro {                  \
+	label = #name;                    \
+	compatible = "zmk,behavior-macro";\
+	#binding-cells = <0>;             \
+	tap-ms = <1>;                     \
+	wait-ms = <1>;                    \
+	bindings = <keys>;                \
+};
+
 / {
-    macros {
-        my_macro: my_macro {
-            label = "my_macro";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp Z &kp M &kp K>;
-        };
-    };
+	macros {
+		MACRO(vim_q,  &kp COLON &kp Q &kp EXCL)
+		MACRO(vim_s,  &kp COLON &kp W &kp Q)
+		MACRO(dir_up, &kp DOT &kp DOT &kp FSLH)
+	};
 };
 
 
