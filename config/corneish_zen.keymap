@@ -110,7 +110,7 @@ name: name##_macro {                  \
                         bindings = <
         &kp ESC         &kp TAB         &none           &none           &none           &none           &none           &kp UP          &none           &none
         &sk LSHFT       &sk LALT        &sk LCTRL       &sk LGUI        &none           &kp PG_UP       &kp LEFT        &kp DOWN        &kp RIGHT       &kp HOME
-        &my_macro       &kp LC(X)       &kp LC(C)       &kp LC(V)       &none           &kp PG_DN       &none           &none           &none           &kp END
+        &none           &kp LC(X)       &kp LC(C)       &kp LC(V)       &none           &kp PG_DN       &none           &none           &none           &kp END
                                         &kp LGUI        &trans          &kp RET         &none           &trans          &kp RALT
                         >;
                 };
