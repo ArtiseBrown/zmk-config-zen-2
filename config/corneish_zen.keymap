@@ -36,10 +36,21 @@
 //    };
 //};
 
+#define COMBO(name, keypress, keypos) \
+combo_##name {                        \
+	timeout-ms = <30>;                \
+	bindings = <keypress>;            \
+	key-positions = <keypos>;         \
+};
+/* Combo key positions
+ 0  1  2  3  4         5  6  7  8  9
+10 11 12 13 14        15 16 17 18 19
+20 21 22 23 24        25 26 27 28 29
+			30 31  32 33             */
+
 / {
 	combos {
 		compatible = "zmk,combos";
-		COMBO(numb,   &tog NUM,     25 33)
 		COMBO(vol_up, &kp C_VOL_UP,  9 19)
 		COMBO(vol_dn, &kp C_VOL_DN, 19 29)
 		// invoke macros
@@ -73,7 +84,6 @@ name: name##_macro {                  \
 		MACRO(dir_up, &kp DOT &kp DOT &kp FSLH)
 	};
 };
-
 
 / {
         keymap {
