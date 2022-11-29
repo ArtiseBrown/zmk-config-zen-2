@@ -59,7 +59,7 @@ combo_##name {                        \
 		COMBO(vim_q,  &vim_q,   0  1)
 		COMBO(vim_s,  &vim_s,  20 21)
 		COMBO(dir_up, &dir_up, 28 29)
-                COMBO(nbs_id, &nbs_id, 16 18 23)
+                COMBO(nbs_id, &nbs_id, 16 18)
 	};
 };
 
@@ -80,7 +80,8 @@ name: name##_macro {                  \
 		MACRO(vim_q,  &kp COLON &kp Q &kp EXCL)
 		MACRO(vim_s,  &kp COLON &kp W &kp Q)
 		MACRO(dir_up, &kp DOT &kp DOT &kp FSLH)
-                MACRO(nbs_id, &kp C &kp N5 &kp N0 &kp N1 &kp N3 &kp N0 &kp N5)
+  //              MACRO(nbs_id, &kp C &kp N5 &kp N0 &kp N1 &kp N3 &kp N0 &kp N5)
+                MACRO(nbs_id, &kp HASH &kp HASH)
 	};
 };
 
