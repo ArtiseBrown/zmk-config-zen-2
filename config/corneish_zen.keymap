@@ -59,7 +59,7 @@ combo_##name {                        \
 		COMBO(vim_q,  &vim_q,   0  1)
 		COMBO(vim_s,  &vim_s,  20 21)
 		COMBO(dir_up, &dir_up, 28 29)
-                COMBO(nbs_id, &nbs_id, 23 16 18)
+                COMBO(nbs_id, &nbs_id, 18 23)
 	};
 };
 
