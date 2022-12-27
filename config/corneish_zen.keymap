@@ -4,9 +4,9 @@
 
 #define DEFAULT 0
 #define CUR  1
-#define NPAD 2
-#define NUM  3
-#define SYM  4
+#define NUMPAD 2
+#define SYMBOL  3
+#define SYSTEM  4
 
 / {
   chosen {
@@ -90,7 +90,7 @@ name: name##_macro {                  \
 &kp Q           &kp W           &kp F           &kp P           &kp B           &kp J           &kp L           &kp U           &kp Y           &mt DQT SQT
 &hm LSHFT A     &hm LALT R      &hm LCTRL S     &hm LGUI T      &kp G           &kp M           &hm LGUI N      &hm LCTRL E     &hm LALT I      &hm LSHFT  O
 &kp Z           &kp X           &kp C           &kp D           &kp V           &kp K           &kp H           &mt LT COMMA    &mt GT DOT      &mt FSLH QMARK
-                                &mo NUM         &kp LSHFT       &kp SPACE       &lt CUR BSPC    &mo NPAD        &mo SYM
+                                &mo SYSTEM      &kp LSHFT       &kp SPACE       &lt CUR BSPC    &mo NUMPAD      &mo SYMBOL
                         >;
                 };
 
@@ -109,7 +109,7 @@ name: name##_macro {                  \
                         >;
                 };
 
-                NPAD {
+                NUMPAD {
                         label = "NUMPAD";
 // ------------------------------------------------------------------------------------------------
 // |  ESC  |  TAB  |   (   |    )  |   =   |              |   *   |   7   |   8   |   9   |   +   |
@@ -125,23 +125,8 @@ name: name##_macro {                  \
                         >;
                 };
 
-                lower_layer {
-                        label = "NUMBER";
-// -----------------------------------------------------------------------------------------
-// |  1  |  2  |  3  |  4  |  5  |              |  6  |  7  |  8  |  9  |  0  |
-// | BT1 | BT2 | BT3 | BT4 | BT5 |              | LFT | DWN |  UP | RGT |     |
-// |BTCLR|     |     |     |     |              |     |     |     |     |     |
-//             | GUI |     | SPC |              | ENT |     | ALT |
 
-                        bindings = <
-&kp N1          &kp N2          &kp N3       &kp N4             &kp N5          &kp N6          &kp N7          &kp N8          &kp N9          &kp N0
-&bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2 &bt BT_SEL 3       &bt BT_SEL 4    &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &trans
-&bt BT_CLR      &trans          &trans       &trans             &trans          &trans          &trans          &trans          &trans          &trans
-                                &kp LGUI     &trans             &kp SPACE       &kp RET         &trans          &kp RALT
-                        >;
-                };
-
-                raise_layer {
+                SYMBOL {
                         label = "SYMBOL";
 // -----------------------------------------------------------------------------------------
 // |  !  |  @  |  #  |  $  |  %  |              |  ^  |  &  |  *  |  (  |  )  |
@@ -156,5 +141,23 @@ name: name##_macro {                  \
                                 &kp LGUI        &trans          &kp SPACE       &kp RET         &trans          &kp RALT
                         >;
                 };
+
+                SYSTEM {
+                        label = "SYSTEM";
+// -----------------------------------------------------------------------------------------
+// |  1  |  2  |  3  |  4  |  5  |              |  6  |  7  |  8  |  9  |  0  |
+// | BT1 | BT2 | BT3 | BT4 | BT5 |              | LFT | DWN |  UP | RGT |     |
+// |BTCLR|     |     |     |     |              |     |     |     |     |     |
+//             | GUI |     | SPC |              | ENT |     | ALT |
+
+                        bindings = <
+&kp N1          &kp N2          &kp N3       &kp N4             &kp N5          &kp N6          &kp N7          &kp N8          &kp N9          &kp N0
+&bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2 &bt BT_SEL 3       &bt BT_SEL 4    &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &trans
+&bt BT_CLR      &trans          &trans       &trans             &trans          &trans          &trans          &trans          &trans          &trans
+                                &kp LGUI     &trans             &kp SPACE       &kp RET         &trans          &kp RALT
+                        >;
+                };
+
+
         };
 };
