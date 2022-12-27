@@ -51,6 +51,9 @@ combo_##name {                        \
 		compatible = "zmk,combos";
 		COMBO(vol_up, &kp C_VOL_UP,  9 19)
 		COMBO(vol_dn, &kp C_VOL_DN, 19 29)
+                // symbols
+                COMBO(l_bracket, LPAR, 4 27)
+                COMBO(r_bracket, RPAR, 4 28)
 		// invoke macros
 		COMBO(vim_q,  &vim_q,   0  1)
 		COMBO(vim_s,  &vim_s,  20 21)
@@ -90,9 +93,9 @@ name: name##_macro {                  \
                 default_layer {
                         label = "COLEMK";
 // -----------------------------------------------------------------------------------------
-// |  Q  |  W  |  F  |  P  |  B  |              |   J   |  L   |  U  |  Y  |  '  |
-// |  A  |  R  |  S  |  T  |  G  |              |   M   |  N   |  E  |  I  |  O  |
-// |  Z  |  X  |  C  |  D  |  V  |              |   K   |  H   |  ,  |  .  |  ?  |
+// |   Q   |   W   |   F   |   P   |   B   |              |   J   |   L   |   U   |   Y   |   '   |
+// |   A   |   R   |   S   |   T   |   G   |              |   M   |   N   |   E   |   I   |   O   |
+// |   Z   |   X   |   C   |   D   |   V   |              |   K   |   H   |   ,   |   .   |   ?   |
 //             | GUI | LWR | SPC |              | BKSPC | RSE  | ALT |
                         bindings = <
 &kp Q           &kp W           &kp F           &kp P           &kp B           &kp J           &kp L           &kp U           &kp Y           &mt DQT SQT
@@ -105,10 +108,10 @@ name: name##_macro {                  \
                 CUR {
                         label = "CURSOR";
 // ----------------------------------------------------------------------------------------------
-// |  ESC  |  TAB  |  ---  |  ---  |  ---  |            |  ---  |  ---  |  Up   |  ---  |  ---  |
-// | LSHFT | LALT  | LCTRL |  LGUI |  ---  |            | PG UP |  Left |  Down | Right |  Home |
-// |  Undo |  Cut  |  Copy | Paste |  Redo |            | PG DN |  ---  |  ---  |  ---  |  End  |
-//                 |  LGUI |       |  RET  |            |  ---  |       |  RALT |
+// |  ESC  |  TAB  |  ---  |  ---  |  ---  |              |  ---  |  ---  |  Up   |  ---  |  ---  |
+// | LSHFT | LALT  | LCTRL |  LGUI |  ---  |              | PG UP |  Left |  Down | Right |  Home |
+// |  Undo |  Cut  |  Copy | Paste |  Redo |              | PG DN |  ---  |  ---  |  ---  |  End  |
+//                 |  LGUI |       |  RET  |              |  ---  |       |  RALT |
                         bindings = <
 &kp ESC         &kp TAB         &none           &none           &caps_word      &none           &none           &kp UP          &none           &none
 &sk LSHFT       &sk LALT        &sk LCTRL       &sk LGUI        &none           &kp PG_UP       &kp LEFT        &kp DOWN        &kp RIGHT       &kp HOME
@@ -120,7 +123,7 @@ name: name##_macro {                  \
                 NUMPAD {
                         label = "NUMPAD";
 // ------------------------------------------------------------------------------------------------
-// |  ESC  |  TAB  |   (   |    )  |   =   |              |   *   |   7   |   8   |   9   |   +   |
+// |  ESC  |  TAB  |   (   |   )   |   =   |              |   *   |   7   |   8   |   9   |   +   |
 // |  ---  |  ---  |  ---  |  ---  |   ,   |              |   /   |   4   |   5   |   6   |   -   |
 // |  ---  |  ---  |  ---  |  ---  |  ---  |              |   0   |   1   |   2   |   3   |   .   |
 //                 | LGUI  |       |  DEF  |              |  RTN  |       |  RALT |
@@ -136,11 +139,11 @@ name: name##_macro {                  \
 
                 SYMBOL {
                         label = "SYMBOL";
-// -----------------------------------------------------------------------------------------
-// |  !  |  @  |  #  |  $  |  %  |              |  ^  |  &  |  *  |  (  |  )  |
-// |     |     |     |     |     |              |  -  |  =  |  [  |  ]  |  \  |
-// |     |     |     |     |     |              |  _  |  +  |  {  |  }  | "|" |
-//             | GUI |     | SPC |              | ENT |     | ALT |
+// ---------------------------------------------------------------------------------------
+// |   !   |   @   |   #   |   $   |   %   |              |   ^   |   &   |   *   |   (   |   )   |
+// |       |   €   |   £   |   ~   |   `   |              |   -   |   =   |   \   |   [   |   ]   |
+// |       |       |       |       |       |              |   _   |   +   |   |   |   {   |   }   |
+//                 |  GUI  |       |  SPC  |              |  ENT  |       |  ALT  |
 
                         bindings = <
 &kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PRCNT       &kp CARET       &kp AMPS        &kp KP_MULTIPLY &kp LPAR        &kp RPAR
@@ -153,10 +156,10 @@ name: name##_macro {                  \
                 SYSTEM {
                         label = "SYSTEM";
 // -----------------------------------------------------------------------------------------
-// |  1  |  2  |  3  |  4  |  5  |              |  6  |  7  |  8  |  9  |  0  |
-// | BT1 | BT2 | BT3 | BT4 | BT5 |              | LFT | DWN |  UP | RGT |     |
-// |BTCLR|     |     |     |     |              |     |     |     |     |     |
-//             | GUI |     | SPC |              | ENT |     | ALT |
+// |       |       | S Shot|BR Down| BR Up |              | V.Mute| V.Down|  V.Up |       | Power |
+// |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |              |       |       |       |       |       |
+// | BTCLR |       |       |       |       |              |       |       |       |       |       |
+//                 |  GUI  |       |  SPC  |              |  ENT  |       |  ALT  |
 
                         bindings = <
 &kp N1          &kp N2          &kp N3       &kp N4             &kp N5          &kp N6          &kp N7          &kp N8          &kp N9          &kp N0
