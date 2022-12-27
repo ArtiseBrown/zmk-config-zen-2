@@ -14,7 +14,16 @@
   };
 };
 
-
+behaviors {
+        hm: homerow_mods {
+                compatible = "zmk,behavior-hold-tap";
+                label = "HOMEROW_MODS";
+                #binding-cells = <2>;
+                tapping_term_ms = <150>;
+                flavor = "tap-preferred";
+                bindings = <&kp>, <&kp>;
+                };
+        };
 
 #define COMBO(name, keypress, keypos) \
 combo_##name {                        \
@@ -78,7 +87,7 @@ name: name##_macro {                  \
 //             | GUI | LWR | SPC |              | ENT | RSE  | ALT |
                         bindings = <
         &kp Q   &kp W   &kp F   &kp P   &kp B           &kp J           &kp L           &kp U           &kp Y           &mt DQT SQT
-        &kp A   &kp R   &kp S   &kp T   &kp G           &kp M           &kp N           &kp E           &kp I           &kp  O
+        &hm LSHFT A   &hm LALT R   &hm LCTRL S   &hm LGUI T   &kp G           &kp M           &hm LGUI N           &hm LCTRL E           &hm LALT I           &hm LSHFT  O
         &kp Z   &kp X   &kp C   &kp D   &kp V           &kp K           &kp H           &mt LT COMMA    &mt GT DOT      &mt FSLH QMARK
                                         &mo NUMBER      &kp LSHFT       &kp SPACE       &lt CURSOR BSPC &mo NUMPAD      &mo SYMBOL
                         >;
