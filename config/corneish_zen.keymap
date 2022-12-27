@@ -110,7 +110,7 @@ name: name##_macro {                  \
 // |  Undo |  Cut  |  Copy | Paste |  Redo |            | PG DN |  ---  |  ---  |  ---  |  End  |
 //                 |  LGUI |       |  RET  |            |  ---  |       |  RALT |
                         bindings = <
-&kp ESC         &kp TAB         &none           &none           &kp CAPS        &none           &none           &kp UP          &none           &none
+&kp ESC         &kp TAB         &none           &none           &caps_word      &none           &none           &kp UP          &none           &none
 &sk LSHFT       &sk LALT        &sk LCTRL       &sk LGUI        &none           &kp PG_UP       &kp LEFT        &kp DOWN        &kp RIGHT       &kp HOME
 &none           &kp LC(X)       &kp LC(C)       &kp LC(V)       &none           &kp PG_DN       &none           &none           &none           &kp END
                                 &kp LGUI        &trans          &kp RET         &none           &trans          &kp RALT
