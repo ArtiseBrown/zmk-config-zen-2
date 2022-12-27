@@ -15,26 +15,6 @@
 };
 
 
-/// {
-//    combos {
-//        compatible = "zmk,combos";
-//        combo_esc {timeout-ms = <50>; key-positions = <0 1>;bindings = <&kp HASH>;};
-//        combo_tab {timeout-ms = <50>; key-positions = <1 2>;bindings = <&kp PERCENT>;};
-//        combo_my_macro {timeout-ms = <50>; key-positions = <21 22>;bindings = <&my_macro>;};
-//    };
-//};
-
-
-/// {
-//    macros {
-//        my_macro: my_macro {
-//            label = "my_macro";
-//            compatible = "zmk,behavior-macro";
-//            #binding-cells = <0>;
-//            bindings = <&macro_tap &kp Z &kp M &kp K>;
-//        };
-//    };
-//};
 
 #define COMBO(name, keypress, keypos) \
 combo_##name {                        \
@@ -59,7 +39,7 @@ combo_##name {                        \
 		COMBO(vim_q,  &vim_q,   0  1)
 		COMBO(vim_s,  &vim_s,  20 21)
 		COMBO(dir_up, &dir_up, 28 29)
-                COMBO(nbs_id, &nbs_id, 16 18)
+                COMBO(nbs_id, &nbs_id, 15 17)
 	};
 };
 
@@ -80,8 +60,8 @@ name: name##_macro {                  \
 		MACRO(vim_q,  &kp COLON &kp Q &kp EXCL)
 		MACRO(vim_s,  &kp COLON &kp W &kp Q)
 		MACRO(dir_up, &kp DOT &kp DOT &kp FSLH)
-  //              MACRO(nbs_id, &kp C &kp N5 &kp N0 &kp N1 &kp N3 &kp N0 &kp N5)
-                MACRO(nbs_id, &kp HASH &kp HASH)
+                MACRO(nbs_id, &kp C &kp N5 &kp N0 &kp N1 &kp N3 &kp N0 &kp N5)
+//                MACRO(nbs_id, &kp HASH &kp HASH)
 	};
 };
 
