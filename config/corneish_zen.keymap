@@ -52,8 +52,8 @@ combo_##name {                        \
 		COMBO(vol_up, &kp C_VOL_UP,  9 19)
 		COMBO(vol_dn, &kp C_VOL_DN, 19 29)
                 // symbols
-                COMBO(l_bracket, LPAR, 4 27)
-                COMBO(r_bracket, RPAR, 4 28)
+                COMBO(l_bracket, &kp LPAR, 4 27)
+                COMBO(r_bracket, &kp RPAR, 4 28)
 		// invoke macros
 		COMBO(vim_q,  &vim_q,   0  1)
 		COMBO(vim_s,  &vim_s,  20 21)
