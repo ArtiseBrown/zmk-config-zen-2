@@ -8,6 +8,9 @@
 #define SYMBOL  3
 #define SYSTEM  4
 
+#define MO_TO(layer) &mo_to layer layer   // Macro to apply momentary-layer-on-hold/go-to-layer-on-tap
+
+
 / {
   chosen {
     zmk,matrix_transform = &five_column_transform;
@@ -33,7 +36,7 @@ combo_##name {                        \
 10 11 12 13 14          15 16 17 18 19
 20 21 22 23 24          25 26 27 28 29
       30 31 32          33 34 35            
-*/
+*/ 
 
 / {
         behaviors {
@@ -60,6 +63,15 @@ combo_##name {                        \
 		COMBO(dir_up, &dir_up, 28 29)
                 COMBO(nbs_id, &nbs_id, 15 17)
 	};
+
+        mo_to: behavior_mo_to {
+            compatible = "zmk,behavior-hold-tap";
+            label = "mo_to";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&to>;
+        };
 };
 
 
@@ -101,7 +113,7 @@ name: name##_macro {                  \
 &kp Q           &kp W           &kp F           &kp P           &kp B           &kp J           &kp L           &kp U           &kp Y           &mt DQT SQT
 &hm LSHFT A     &hm LALT R      &hm LCTRL S     &hm LGUI T      &kp G           &kp M           &hm LGUI N      &hm LCTRL E     &hm LALT I      &hm LSHFT  O
 &kp Z           &kp X           &kp C           &kp D           &kp V           &kp K           &kp H           &mt LT COMMA    &mt GT DOT      &mt FSLH QMARK
-                                &mo SYSTEM      &kp LSHFT       &kp SPACE       &lt CUR BSPC    &to NUMPAD      &mo SYMBOL
+                                &mo SYSTEM      &kp LSHFT       &kp SPACE       &lt CUR BSPC    &to NUMPAD      &MO_TO(NUMPAD)
                         >;
                 };
 
