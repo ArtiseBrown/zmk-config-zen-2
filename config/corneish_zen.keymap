@@ -88,7 +88,6 @@ name: name##_macro {                  \
 
 
 
-
 / {
 	macros {
 		MACRO(vim_q,  &kp COLON &kp Q &kp EXCL)
@@ -114,7 +113,7 @@ name: name##_macro {                  \
 &kp Q           &kp W           &kp F           &kp P           &kp B           &kp J           &kp L           &kp U           &kp Y           &mt DQT SQT
 &hm LSHFT A     &hm LALT R      &hm LCTRL S     &hm LGUI T      &kp G           &kp M           &hm LGUI N      &hm LCTRL E     &hm LALT I      &hm LSHFT  O
 &kp Z           &kp X           &kp C           &kp D           &kp V           &kp K           &kp H           &mt LT COMMA    &mt GT DOT      &mt FSLH QMARK
-                                &mo SYSTEM      &kp LSHFT       &kp SPACE       &lt CUR BSPC    &mo_to CUR CUR  MO_TO(NUMPAD)
+                                &mo SYSTEM      &kp LSHFT       &kp SPACE       &lt CUR BSPC    &mo_to 2 2      MO_TO(NUMPAD)
                         >;
                 };
 
