@@ -128,10 +128,10 @@ name: name##_macro {                  \
 // |  Undo |  Cut  |  Copy | Paste |  Redo |              | PG DN |  ---  |  ---  |  ---  |  End  |
 //                 |  LGUI |       |  RET  |              |  ---  |       |  RALT |
                         bindings = <
-&kp ESC         &none           &none           &none           &caps_word      &none           &none           &none           &none           &none
-&sk LSHFT       &sk LALT        &sk LCTRL       &sk LGUI        &none           &none           &none           &none           &none           &none
-&none           &kp LC(X)       &kp LC(C)       &kp LC(V)       &none           &none           &none           &none           &none           &none
-                                &none        &to DEFAULT        &none           &none           &none          &none
+&kp LC(LG(Q))   &none           &none           &none           &caps_word      &none           &none           &none           &none           &none
+&sk LSHFT       &sk LALT        &sk LCTRL       &sk LGUI        &none           &none           &to SYSTEM      &none           &none           &none
+&kp LG(L)       &kp LC(X)       &kp LC(C)       &kp LC(LA(DEL)) &none           &none           &to CURSOR      &none           &none           &none
+                                &none           &to DEFAULT     &none           &to CURSOR      &to NUMPAD      &to SYMBOL
                         >;
                 };
 
@@ -156,7 +156,7 @@ name: name##_macro {                  \
 // |  ESC  |  TAB  |   (   |   )   |   =   |              |   *   |   7   |   8   |   9   |   +   |
 // |  ---  |  ---  |  ---  |  ---  |   ,   |              |   /   |   4   |   5   |   6   |   -   |
 // |  ---  |  ---  |  ---  |  ---  |  ---  |              |   0   |   1   |   2   |   3   |   .   |
-//                 | LGUI  |       |  DEF  |              |  RTN  |       |  RALT |
+//                 | LGUI  |  DEF  |       |              |  RTN  |       |  RALT |
 
                         bindings = <
 &kp ESC         &kp TAB         &kp LPAR        &kp RPAR        &kp KP_EQUAL    &kp KP_MULTIPLY &kp N7          &kp N8          &kp N9          &kp KP_PLUS
