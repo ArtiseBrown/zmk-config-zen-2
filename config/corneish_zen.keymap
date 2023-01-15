@@ -122,11 +122,11 @@ name: name##_macro {                  \
 
                 LOGIN {
                         label = "LOGIN";
-// ----------------------------------------------------------------------------------------------
-// |  ESC  |  TAB  |  ---  |  ---  |  ---  |              |  ---  |  ---  |  Up   |  ---  |  ---  |
-// | LSHFT | LALT  | LCTRL |  LGUI |  ---  |              | PG UP |  Left |  Down | Right |  Home |
-// |  Undo |  Cut  |  Copy | Paste |  Redo |              | PG DN |  ---  |  ---  |  ---  |  End  |
-//                 |  LGUI |       |  RET  |              |  ---  |       |  RALT |
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------
+// |  Mac Lock   |     TAB     |     ---     |     ---     |     ---     |              |     ---     |     ---     |     ---     |     ---     |     ---     |
+// |    LSHFT    |     LALT    |    LCTRL    |     LGUI    |     ---     |              | (TO)Fn keys |  (TO)System |  (TO)Media  |     ---     |     ---     |
+// |  Win Lock   |     Cut     |     Copy    |  Win Login  |     Redo    |              |     ---     |  (TO)Cursor |  (TO)Mouse  |     ---     |     ---     |
+//                             |     LGUI    |             |     RET     |              | (TO)Cursor  |  (TO)Numpad | (TO)Symbols |
                         bindings = <
 &kp LC(LG(Q))   &none           &none           &none           &caps_word      &none           &none           &none           &none           &none
 &sk LSHFT       &sk LALT        &sk LCTRL       &sk LGUI        &none           &none           &to SYSTEM      &none           &none           &none
