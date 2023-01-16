@@ -156,13 +156,13 @@ name: name##_macro {                  \
 // |  ESC  |  TAB  |   (   |   )   |   =   |              |   *   |   7   |   8   |   9   |   +   |
 // |  ---  |  ---  |  ---  |  ---  |   ,   |              |   /   |   4   |   5   |   6   |   -   |
 // |  ---  |  ---  |  ---  |  ---  |  ---  |              |   0   |   1   |   2   |   3   |   .   |
-//                 | LGUI  |  DEF  |       |              |  RTN  |       |  RALT |
+//                 | LGUI  |  DEF  | SPACE |              |  RTN  |       |  RALT |
 
                         bindings = <
-&kp ESC         &kp TAB         &kp LPAR        &kp RPAR        &kp KP_EQUAL    &kp KP_MULTIPLY &kp N7          &kp N8          &kp N9          &kp KP_PLUS
+&kp ESC         &kp TAB         &kp LPAR        &kp RPAR        &kp EQUAL       &kp KP_MULTIPLY &kp N7          &kp N8          &kp N9          &kp KP_PLUS
 &none           &none           &none           &none           &kp COMMA       &kp KP_DIVIDE   &kp N4          &kp N5          &kp N6          &kp KP_MINUS
 &none           &none           &none           &none           &none           &kp N0          &kp N1          &kp N2          &kp N3          &kp KP_DOT
-                                &kp LGUI        &to DEFAULT     &kp SPACE       &kp RET         &trans          &kp RALT
+                                &kp LGUI        &to DEFAULT     &kp SPACE       &lt CUR BSPC    &trans          &kp RALT
                         >;
                 };
 
