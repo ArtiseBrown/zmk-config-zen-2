@@ -7,7 +7,8 @@
 #define CUR     2
 #define NUMPAD  3
 #define SYMBOL  4
-#define SYSTEM  5
+#define FN_KEYS 5
+#define SYSTEM  6
 
 #define MO_TO(layer) &mo_to layer layer   // Macro to apply momentary-layer-on-hold/go-to-layer-on-tap
 
@@ -180,6 +181,22 @@ name: name##_macro {                  \
 &trans          &trans          &trans          &trans          &trans          &kp MINUS       &kp EQUAL       &kp LBKT        &kp RBKT        &kp BSLH
 &trans          &trans          &trans          &trans          &trans          &kp UNDER       &kp PLUS        &kp LBRC        &kp RBRC        &kp PIPE
                                 &kp LGUI        &to DEFAULT     &kp SPACE       &kp RET         &trans          &kp RALT
+                        >;
+                };
+
+                FN_KEYS {
+                        label = "FN KEYS";
+// -----------------------------------------------------------------------------------------
+// |  F1   |  F2   |  F3   |  F4   |  F5   |              |  F11  |  F12  |  F12  |  F14  |  F15  |
+// |  LS   |  LA   |  LC   |  LG   |  ---  |              |  ---  |  LG   |  LC   |  LA   |  LS   |
+// |  F6   |  F7   |  F8   |  F9   |  F10  |              |  F16  |  F17  |  F18  |  F19  |  F20  |
+//                 |  ---  |  ---  |  SPC  |              |  ENT  |  ---  |  ---  |
+
+                        bindings = <
+&kp F1          &kp F2          &kp F3       &kp F4             &kp F5          &kp F11         &kp F12         &kp F13         &kp F14         &kp F15
+&sk LSHFT       &sk LALT        &sk LCTRL    &sk LGUI           &none           &none           &sk LGUI        &sk LCTRL       &sk LALT        &sk LSHFT
+&kp F6          &kp F7          &kp F8       &kp F9             &kp F10         &kp F16         &kp F17         &kp F18         &kp F19         &kp F20
+                                &none        &to DEFAULT        &kp SPACE       &kp RET         &none           &none
                         >;
                 };
 
