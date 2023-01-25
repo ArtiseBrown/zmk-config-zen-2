@@ -130,7 +130,7 @@ name: name##_macro {                  \
 //                             |     LGUI    |             |     RET     |              | (TO)Cursor  |  (TO)Numpad | (TO)Symbols |
                         bindings = <
 &kp LC(LG(Q))   &none           &none           &none           &caps_word      &none           &none           &none           &none           &none
-&sk LSHFT       &sk LALT        &sk LCTRL       &sk LGUI        &none           &none           &to SYSTEM      &none           &none           &none
+&sk LSHFT       &sk LALT        &sk LCTRL       &sk LGUI        &none           &to FN_KEYS     &to SYSTEM      &none           &none           &none
 &kp LG(L)       &kp LC(X)       &kp LC(C)       &kp LC(LA(DEL)) &none           &none           &to CUR         &none           &none           &none
                                 &none           &to DEFAULT     &none           &to CUR         &to NUMPAD      &to SYMBOL
                         >;
