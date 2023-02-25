@@ -144,10 +144,10 @@ name: name##_macro {                  \
 // |  Undo |  Cut  |  Copy | Paste |  Redo |              | PG DN |  ---  |  ---  |  ---  |  End  |
 //                 |  LGUI |       |  RET  |              |  ---  |       |  RALT |
                         bindings = <
-&kp ESC         &kp TAB         &none           &none           &caps_word      &none           &none           &kp UP          &none           &none
-&sk LSHFT       &sk LALT        &sk LCTRL       &sk LGUI        &none           &kp PG_UP       &kp LEFT        &kp DOWN        &kp RIGHT       &kp HOME
-&kp LC(Z)       &kp LC(X)       &kp LC(C)       &kp LC(V)       &kp LC(Y)       &kp PG_DN       &none           &none           &none           &kp END
-                                &kp LGUI        &to DEFAULT     &kp RET         &none           &trans          &kp RALT
+&kp ESC         &kp TAB         &none           &none           &caps_word              &none           &none           &kp UP          &none           &none
+&sk LSHFT       &sk LALT        &sk LCTRL       &sk LGUI        &none                   &kp PG_UP       &kp LEFT        &kp DOWN        &kp RIGHT       &kp HOME
+&kp LC(Z)       &kp LC(X)       &kp LC(C)       &kp LC(V)       &kp LC(Y)               &kp PG_DN       &none           &none           &none           &kp END
+                                &kp LGUI        &to DEFAULT     &kp RET                 &none           &trans          &kp RALT
                         >;
                 };
 
@@ -155,32 +155,32 @@ name: name##_macro {                  \
                         label = "NUMPAD";
 // ------------------------------------------------------------------------------------------------
 // |  ESC  |  TAB  |   (   |   )   |   =   |              |   *   |   7   |   8   |   9   |   +   |
-// |  ---  |  ---  |  ---  |  ---  |   ,   |              |   /   |   4   |   5   |   6   |   -   |
-// |  ---  |  ---  |  ---  |  ---  |  ---  |              |   0   |   1   |   2   |   3   |   .   |
+// |  ---  |  ---  |  ---  |  ---  |   ;   |              |   /   |   4   |   5   |   6   |   -   |
+// |  ---  |  ---  |  ---  |  ---  |   ,   |              |   0   |   1   |   2   |   3   |   .   |
 //                 | LGUI  |  DEF  | SPACE |              |  RTN  |       |  RALT |
 
                         bindings = <
-&kp ESC         &kp TAB         &kp LPAR        &kp RPAR        &kp EQUAL       &kp KP_MULTIPLY &kp N7          &kp N8          &kp N9          &kp KP_PLUS
-&none           &none           &none           &none           &kp COMMA       &kp KP_DIVIDE   &kp N4          &kp N5          &kp N6          &kp KP_MINUS
-&none           &none           &none           &none           &none           &kp N0          &kp N1          &kp N2          &kp N3          &kp KP_DOT
-                                &kp LGUI        &to DEFAULT     &kp SPACE       &lt CUR BSPC    &trans          &kp RALT
+&kp ESC         &kp TAB         &kp LPAR        &kp RPAR        &kp EQUAL               &kp KP_MULTIPLY &kp N7          &kp N8          &kp N9          &kp KP_PLUS
+&none           &none           &none           &none           &kp SEMI                &kp KP_DIVIDE   &kp N4          &kp N5          &kp N6          &kp KP_MINUS
+&none           &none           &none           &none           &mk COMMA               &kp N0          &kp N1          &kp N2          &kp N3          &kp KP_DOT
+                                &kp LGUI        &to DEFAULT     &kp SPACE               &lt CUR BSPC    &trans          &kp RALT
                         >;
                 };
 
 
                 SYMBOL {
                         label = "SYMBOL";
-// ---------------------------------------------------------------------------------------
-// |   !   |   @   |   #   |   $   |   %   |              |   ^   |   &   |   *   |   (   |   )   |
-// |       |   €   |   £   |   ~   |   `   |              |   -   |   =   |   \   |   [   |   ]   |
-// |       |       |       |       |       |              |   _   |   +   |   |   |   {   |   }   |
-//                 |  GUI  |       |  SPC  |              |  ENT  |       |  ALT  |
+// --------------------------------------------------------------------------------------------------------------------
+// |    !    |    @    |    #    |    $    |    %    |              |    ^    |    &    |    *    |    (    |    )    |
+// |         |    €    |    £    |    ~    |     `   |              |    -    |    =    |    [    |    ]    |    \    |
+// |         |         |         |         |         |              |    _    |    +    |    {    |    }    |    |    |
+//                     |   GUI   |         |   SPC   |              |   ENT   |         |   ALT   |
 
                         bindings = <
-&kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PRCNT       &kp CARET       &kp AMPS        &kp KP_MULTIPLY &kp LPAR        &kp RPAR
-&trans          &trans          &trans          &trans          &trans          &kp MINUS       &kp EQUAL       &kp LBKT        &kp RBKT        &kp BSLH
-&trans          &trans          &trans          &trans          &trans          &kp UNDER       &kp PLUS        &kp LBRC        &kp RBRC        &kp PIPE
-                                &kp LGUI        &to DEFAULT     &kp SPACE       &kp RET         &trans          &kp RALT
+     &kp EXCL   &kp AT  &kp HASH        &kp DLLR        &kp PRCNT               &kp CARET       &kp AMPS        &kp KP_MULTIPLY &kp LPAR        &kp RPAR
+     &trans     &trans  &trans          &trans          &trans                  &kp MINUS       &kp EQUAL       &kp LBKT        &kp RBKT        &kp BSLH
+     &trans     &trans  &trans          &trans          &trans                  &kp UNDER       &kp PLUS        &kp LBRC        &kp RBRC        &kp PIPE
+                        &kp LGUI        &to DEFAULT     &kp SPACE               &kp RET         &trans          &kp RALT
                         >;
                 };
 
