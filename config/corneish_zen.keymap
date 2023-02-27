@@ -180,7 +180,7 @@ name: name##_macro {                  \
 
                         bindings = <
 &kp EXCL        &kp AT          &kp POUND       &kp DLLR        &kp PRCNT               &kp ASTRK       &mt GT LT       &mt FSLH BSLH   &kp EQUAL       &kp PLUS
-&kp CARET       &kp AMPS        &kp ASTRK       &trans          &trans                  &kp FSLH        &mt RPAR LPAR   &mt RBKT LBKR   &kp UNDER       &kp MINUS
+&kp CARET       &kp AMPS        &kp ASTRK       &trans          &trans                  &kp FSLH        &mt RPAR LPAR   &mt RBKT LBKT   &kp UNDER       &kp MINUS
 &trans     &trans  &trans          &trans          &trans                  &kp UNDER       &kp PLUS        &kp LBRC        &kp RBRC        &kp PIPE
                         &kp LGUI        &to DEFAULT     &kp SPACE               &kp RET         &trans          &kp RALT
                         >;
