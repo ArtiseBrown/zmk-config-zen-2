@@ -174,14 +174,14 @@ name: name##_macro {                  \
                         label = "SYMBOL";
 // --------------------------------------------------------------------------------------------------------------------
 // |    !    |    @    |    £€   |    $    |    %    |              |    *    |    |    |   \ /   |    =    |    +    |
-// |    ^    |    &    |    *    |  # Win  |  # Mac  |              |    /    |   < >   |   ( )   |    _    |    -    |
-// |  N-dash |  M-dash |    "    |    `    |    ~    |              |         |   { }   |   [ ]   |   ; :   |         |
+// |    ^    |    &    |    *    |  # Win  |  # Mac  |              |    /    |   ( )   |   [ ]   |    _    |    -    |
+// |  N-dash |  M-dash |    "    |    `    |    ~    |              |   < >   |   { }   |    ;    |    :    |        |
 //                     |   GUI   |         |   SPC   |              |   ENT   |         |   ALT   |
 
                         bindings = <
 &kp EXCL        &kp AT          &kp POUND       &kp DLLR        &kp PRCNT               &kp ASTRK       &kp PIPE        &mt FSLH BSLH   &kp EQUAL       &kp PLUS
-&kp CARET       &kp AMPS        &kp ASTRK       &trans          &trans                  &kp FSLH        &mt GT LT       &mt RPAR LPAR   &kp UNDER       &kp MINUS
-&trans          &trans          &kp DQT         &kp GRAVE       &kp TILDE               &none           &mt RBRC LBRC   &mt RBKT LBKT   &mt COLON SEMI  &none
+&kp CARET       &kp AMPS        &kp ASTRK       &trans          &trans                  &kp FSLH        &mt RPAR LPAR   &mt RBKT LBKR   &kp UNDER       &kp MINUS
+&trans          &trans          &kp DQT         &kp GRAVE       &kp TILDE               &mt GT LT       &mt RBRC LBRC   &kp SEMI        &kp COLON       &none
                                 &kp LGUI        &to DEFAULT     &kp SPACE               &kp RET         &trans          &kp RALT
                         >;
                 };
