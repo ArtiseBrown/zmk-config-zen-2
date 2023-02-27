@@ -179,7 +179,7 @@ name: name##_macro {                  \
 //                     |   GUI   |         |   SPC   |              |   ENT   |         |   ALT   |
 
                         bindings = <
-&kp EXCL        &kp AT          &ht EURO POUND  &kp DLLR        &kp PRCNT               &kp ASTRK       &kp PIPE        &ht FSLH BSLH   &kp EQUAL       &kp PLUS
+&kp EXCL        &kp AT          &kp POUND       &kp DLLR        &kp PRCNT               &kp ASTRK       &kp PIPE        &ht FSLH BSLH   &kp EQUAL       &kp PLUS
 &kp CARET       &kp AMPS        &kp ASTRK       &trans          &trans                  &kp FSLH        &ht GT LT       &ht RPAR LPAR   &kp UNDER       &kp MINUS
 &trans          &trans          &kp DQT         &kp GRAVE       &kp TILDE               &none           &ht RBRC LBRC   &ht RBKT LBKT   &ht COLON SEMI  &none
                                 &kp LGUI        &to DEFAULT     &kp SPACE               &kp RET         &trans          &kp RALT
