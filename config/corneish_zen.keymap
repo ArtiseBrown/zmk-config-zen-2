@@ -179,9 +179,9 @@ name: name##_macro {                  \
 //                     |   GUI   |         |   SPC   |              |   ENT   |         |   ALT   |
 
                         bindings = <
-&kp EXCL        &kp AT          &kp POUND       &kp DLLR        &kp PRCNT               &kp ASTRK       &kp PIPE        &mt FSLH BSLH   &kp EQUAL       &kp PLUS
+&kp EXCL        &kp AT          &kp POUND       &kp DLLR        &kp PRCNT               &kp ASTRK       &mt GT LT       &mt FSLH BSLH   &kp EQUAL       &kp PLUS
 &kp CARET       &kp AMPS        &kp ASTRK       &trans          &trans                  &kp FSLH        &mt RPAR LPAR   &mt RBKT LBKR   &kp UNDER       &kp MINUS
-&trans          &trans          &kp DQT         &kp GRAVE       &kp TILDE               &mt GT LT       &mt RBRC LBRC   &kp SEMI        &kp COLON       &none
+&trans          &trans          &kp DQT         &kp GRAVE       &kp TILDE               &kp PIPE        &mt RBRC LBRC   &kp SEMI        &kp COLON       &none
                                 &kp LGUI        &to DEFAULT     &kp SPACE               &kp RET         &trans          &kp RALT
                         >;
                 };
