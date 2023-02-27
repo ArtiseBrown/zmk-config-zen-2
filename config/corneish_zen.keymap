@@ -114,7 +114,7 @@ name: name##_macro {                  \
 // |   Z   |   X   |   C   |   D   |   V   |              |   K   |   H   |   ,   |   .   |   ?   |
 //             | GUI | LWR | SPC |              | BKSPC | RSE  | ALT |
                         bindings = <
-&kp Q           &kp W           &kp F           &mt LS(F10) P   &mt F5 B        &kp J           &kp L           &kp U           &kp Y           &mt DQT SQT
+&kp Q           &kp W           &kp F           &mt LS(F10) P   &mt F5 B        &kp J           &kp L           &kp U           &kp Y           &mt AT SQT
 &hm LSHFT A     &hm LALT R      &hm LCTRL S     &hm LGUI T      &kp G           &kp M           &hm LGUI N      &hm LCTRL E     &hm LALT I      &hm LSHFT  O
 &mt LC(Z) Z     &mt LC(X) X     &mt LC(C) C     &mt LC(V) D     &mt LC(Y) V     &kp K           &kp H           &mt LT COMMA    &mt GT DOT      &mt FSLH QMARK
                                 &mo SYSTEM      &kp LSHFT       &lt LOGIN SPACE &lt CUR BSPC    MO_TO(NUMPAD)   MO_TO(SYMBOL)
@@ -173,13 +173,13 @@ name: name##_macro {                  \
                 SYMBOL {
                         label = "SYMBOL";
 // --------------------------------------------------------------------------------------------------------------------
-// |    !    |    @    |    £€   |    $    |    %    |              |    *    |    |    |   \ /   |    =    |    +    |
-// |    ^    |    &    |    *    |  # Win  |  # Mac  |              |    /    |   < >   |   ( )   |    _    |    -    |
-// |  N-dash  |  M-dash |    "    |    `    |    ~    |              |         |   { }   |   [ ]   |   ; :   |         |
+// |    !    |    @    |    £€   |    $    |    %    |              |    *    |   < >   |   \ /   |    =    |    +    |
+// |    ^    |    &    |    *    |  # Win  |  # Mac  |              |    /    |   ( )   |   [ ]   |    _    |    -    |
+// |  N-dash |  M-dash |    "    |    `    |    ~    |              |    |    |   { }   |    ;    |    :    |         |
 //                     |   GUI   |         |   SPC   |              |   ENT   |         |   ALT   |
 
                         bindings = <
-&kp EXCL   &kp AT  &kp HASH        &kp DLLR        &kp PRCNT               &kp CARET       &kp AMPS        &kp KP_MULTIPLY &kp LPAR        &kp RPAR
+&kp EXCL        &kp AT          &kp POUND       &kp DLLR        &kp PRCNT               &kp ASTRK       &mt GT LT       &mt FSLH BSLH   &kp EQUAL       &kp PLUS
 &trans     &trans  &trans          &trans          &trans                  &kp MINUS       &kp EQUAL       &kp LBKT        &kp RBKT        &kp BSLH
 &trans     &trans  &trans          &trans          &trans                  &kp UNDER       &kp PLUS        &kp LBRC        &kp RBRC        &kp PIPE
                         &kp LGUI        &to DEFAULT     &kp SPACE               &kp RET         &trans          &kp RALT
