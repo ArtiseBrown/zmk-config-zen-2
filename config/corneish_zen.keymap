@@ -180,7 +180,7 @@ name: name##_macro {                  \
                         bindings = <
 &kp ESC         &kp TAB         &kp LPAR        &kp RPAR        &kp EQUAL               &kp KP_MULTIPLY &kp N7          &kp N8          &kp N9          &kp KP_PLUS
 &none           &none           &none           &none           &kp SEMI                &kp KP_DIVIDE   &kp N4          &kp N5          &kp N6          &kp KP_MINUS
-&none           &none           &none           &none           &kp COMMA               &kp N0          &kp N1          &kp N2          &kp N3          &kp KP_DOT
+&none           &none           &none           &none           &kp COMMA               &kp N0          &kp N1          &kp N2          &kp N3          &kp PERIOD
                                 &kp LGUI        &to DEFAULT     &kp SPACE               &lt CUR BSPC    &trans          &kp RALT
                         >;
                 };
