@@ -116,7 +116,7 @@ name: name##_macro {                  \
                 MACRO(nbs_id, &kp C &kp N5 &kp N0 &kp N1 &kp N3 &kp N0 &kp N5)
                 MACRO(nbs_pw, &kp LS(C) &kp O &kp M &kp P &kp E &kp L &kp SEMI &kp LS(P) &kp O &kp L &kp Y)
                 MACRO(win_word_del, &kp LC(BKSPC))
-                MACRO(mac_word_del, &kp LALT(BKSPC))
+                MACRO(mac_word_del, &kp LA(BKSPC))
 //                MACRO(nbs_id, &kp HASH &kp HASH)
 	};
 };
