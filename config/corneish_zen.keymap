@@ -59,6 +59,22 @@ combo_##name {                        \
             tapping-term-ms = <200>;
             bindings = <&mo>, <&to>;
                 };
+
+        td_comma: tap_dance_comma {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_COMMA";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp COMMA>, <&kp SEMI>, <&kp LT>;
+        };
+
+        td_period: tap_dance_period {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_PERIOD";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp PERIOD>, <&kp COLON>, <&kp GT>;
+        };
                 
         };
 
@@ -116,7 +132,7 @@ name: name##_macro {                  \
                         bindings = <
 &kp Q           &kp W           &kp F           &mt LS(F10) P   &mt F5 B        &kp J           &kp L           &kp U           &kp Y           &mt AT SQT
 &hm LSHFT A     &hm LALT R      &hm LCTRL S     &hm LGUI T      &kp G           &kp M           &hm LGUI N      &hm LCTRL E     &hm LALT I      &hm LSHFT  O
-&mt LC(Z) Z     &mt LC(X) X     &mt LC(C) C     &mt LC(V) D     &mt LC(Y) V     &kp K           &kp H           &mt LT COMMA    &mt GT DOT      &mt FSLH QMARK
+&mt LC(Z) Z     &mt LC(X) X     &mt LC(C) C     &mt LC(V) D     &mt LC(Y) V     &kp K           &kp H           td_comma        td_period       &mt FSLH QMARK
                                 &mo SYSTEM      &kp LSHFT       &lt LOGIN SPACE &lt CUR BSPC    MO_TO(NUMPAD)   MO_TO(SYMBOL)
                         >;
                 };
