@@ -114,6 +114,9 @@ name: name##_macro {                  \
 		MACRO(vim_s,  &kp COLON &kp W &kp Q)
 		MACRO(dir_up, &kp DOT &kp DOT &kp FSLH)
                 MACRO(nbs_id, &kp C &kp N5 &kp N0 &kp N1 &kp N3 &kp N0 &kp N5)
+                MACRO(nbs_pw, &kp LS(C) &kp O &kp M &kp P &kp E &kp L &kp SEMI &kp LS(P) &kp O &kp L &kp Y)
+                MACRO(win_word_del, &kp LC(BKSPC))
+                MACRO(mac_word_del, &kp LALT(BKSPC))
 //                MACRO(nbs_id, &kp HASH &kp HASH)
 	};
 };
@@ -142,27 +145,27 @@ name: name##_macro {                  \
 // ------------------------------------------------------------------------------------------------------------------------------------------------------------
 // |  Mac Lock   |     TAB     |     ---     |     ---     |     ---     |              |     ---     |     ---     |     ---     |     ---     |     ---     |
 // |    LSHFT    |     LALT    |    LCTRL    |     LGUI    |     ---     |              | (TO)Fn keys |  (TO)System |  (TO)Media  |     ---     |     ---     |
-// |  Win Lock   |     Cut     |     Copy    |  Win Login  |     Redo    |              |     ---     |  (TO)Cursor |  (TO)Mouse  |     ---     |     ---     |
+// |  Win Lock   |   Win ID    |    Win PW   |  Win Login  |     Redo    |              |     ---     |  (TO)Cursor |  (TO)Mouse  |     ---     |     ---     |
 //                             |     LGUI    |             |     RET     |              | (TO)Cursor  |  (TO)Numpad | (TO)Symbols |
 
                         bindings = <
-&kp LC(LG(Q))   &none           &none           &none           &caps_word      &none           &none           &none           &none           &none
+&kp LC(LG(Q))   &none           &none           &none           &none           &none           &none           &none           &none           &none
 &sk LSHFT       &sk LALT        &sk LCTRL       &sk LGUI        &none           &to FN_KEYS     &to SYSTEM      &none           &none           &none
-&kp LG(L)       &kp LC(X)       &kp LC(C)       &kp LC(LA(DEL)) &none           &none           &to CUR         &none           &none           &none
+&kp LG(L)       &nbs_id         &nbs_pw         &kp LC(LA(DEL)) &none           &none           &to CUR         &none           &none           &none
                                 &none           &to DEFAULT     &none           &to CUR         &to NUMPAD      &to SYMBOL
                         >;
                 };
 
                 CUR {
                         label = "CURSOR";
-// ----------------------------------------------------------------------------------------------
-// |  ESC  |  TAB  |  ---  |  ---  |  ---  |              |  ---  |  ---  |  Up   |  ---  |  ---  |
-// | LSHFT | LALT  | LCTRL |  LGUI |  ---  |              | PG UP |  Left |  Down | Right |  Home |
-// |  Undo |  Cut  |  Copy | Paste |  Redo |              | PG DN |  ---  |  ---  |  ---  |  End  |
-//                 |  LGUI |       |  RET  |              |  ---  |       |  RALT |
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------
+// |     ESC     |     TAB     |     ---     |     ---     |  CAPS Word  |              |   Word del  |     ---     |     Up      |     ---     |     ---     |
+// |    LSHFT    |    LALT     |    LCTRL    |     LGUI    |     ---     |              |    PG UP    |     Left    |     Down    |    Right    |     Home    |
+// |     Undo    |     Cut     |     Copy    |    Paste    |     Redo    |              |    PG DN    |     ---     |     ---     |     ---     |     End     |
+//                             |     LGUI    |             |     RET     |              |     ---     |             |     RALT    |
 
                         bindings = <
-&kp ESC         &kp TAB         &none           &none           &caps_word              &none           &none           &kp UP          &none           &none
+&kp ESC         &kp TAB         &none           &none           &caps_word              &win_word_del   &none           &kp UP          &none           &none
 &sk LSHFT       &sk LALT        &sk LCTRL       &sk LGUI        &none                   &kp PG_UP       &kp LEFT        &kp DOWN        &kp RIGHT       &kp HOME
 &kp LC(Z)       &kp LC(X)       &kp LC(C)       &kp LC(V)       &kp LC(Y)               &kp PG_DN       &none           &none           &none           &kp END
                                 &kp LGUI        &to DEFAULT     &kp RET                 &none           &trans          &kp RALT
