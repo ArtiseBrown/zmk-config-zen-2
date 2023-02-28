@@ -115,8 +115,8 @@ name: name##_macro {                  \
 		MACRO(dir_up, &kp DOT &kp DOT &kp FSLH)
                 MACRO(nbs_id, &kp C &kp N5 &kp N0 &kp N1 &kp N3 &kp N0 &kp N5)
                 MACRO(nbs_pw, &kp LS(C) &kp O &kp M &kp P &kp E &kp L &kp SEMI &kp LS(P) &kp O &kp L &kp Y)
-//                MACRO(win_word_del, &kp LC(BKSPC))
-//                MACRO(mac_word_del, &kp LA(BKSPC))
+                MACRO(win_word_del, &kp LC(BSPC))
+//                MACRO(mac_word_del, &kp LA(BSPC))
 //                MACRO(nbs_id, &kp HASH &kp HASH)
 	};
 };
@@ -165,7 +165,7 @@ name: name##_macro {                  \
 //                             |     LGUI    |             |     RET     |              |     ---     |             |     RALT    |
 
                         bindings = <
-&kp ESC         &kp TAB         &none           &none           &caps_word              &none           &none           &kp UP          &none           &none
+&kp ESC         &kp TAB         &none           &none           &caps_word              &win_word_del   &none           &kp UP          &none           &none
 &sk LSHFT       &sk LALT        &sk LCTRL       &sk LGUI        &none                   &kp PG_UP       &kp LEFT        &kp DOWN        &kp RIGHT       &kp HOME
 &kp LC(Z)       &kp LC(X)       &kp LC(C)       &kp LC(V)       &kp LC(Y)               &kp PG_DN       &none           &none           &none           &kp END
                                 &kp LGUI        &to DEFAULT     &kp RET                 &none           &trans          &kp RALT
