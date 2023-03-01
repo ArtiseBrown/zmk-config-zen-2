@@ -81,7 +81,7 @@ combo_##name {                        \
             compatible = "zmk,behavior-tap-dance";
             label = "TD_LBRAKETS";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <400>;
             bindings = <&kp LPAR>, <&kp LT>, <&kp LBKT>, <&kp LBRC>;
                 };
 
@@ -89,7 +89,7 @@ combo_##name {                        \
             compatible = "zmk,behavior-tap-dance";
             label = "TD_RBRAKETS";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <400>;
             bindings = <&kp RPAR>, <&kp GT>, <&kp RBKT>, <&kp RBRC>;
                 };
 
