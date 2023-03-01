@@ -218,7 +218,7 @@ name: name##_macro {                  \
                         bindings = <
 &kp EXCL        &kp AT          &mt LA(N2) POUND       &kp DLLR        &kp PRCNT               &kp ASTRK       &mt GT LT       &mt FSLH BSLH   &kp EQUAL       &kp PLUS
 &kp CARET       &kp AMPS        &kp ASTRK               &trans          &trans                  &kp FSLH        &mt RPAR LPAR   &mt RBKT LBKT   &kp UNDER       &kp MINUS
-&trans          &trans          &kp DQT                 &kp GRAVE       &kp TILDE               &kp PIPE        &mt RBRC LBRC   &TD_LBRAKETS    &TD_RBRAKETS       &none
+&trans          &trans          &kp DQT                 &kp GRAVE       &kp TILDE               &kp PIPE        &mt RBRC LBRC   &td_lbrakets    &td_rbrakets       &none
                                 &kp LGUI                &to DEFAULT     &kp SPACE               &kp RET         &trans          &kp RALT
                         >;
                 };
