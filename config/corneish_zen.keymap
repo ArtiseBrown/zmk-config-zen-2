@@ -134,6 +134,8 @@ name: name##_macro {                  \
                 MACRO(nbs_id, &kp C &kp N5 &kp N0 &kp N1 &kp N3 &kp N0 &kp N5)
                 MACRO(nbs_pw, &kp LS(C) &kp O &kp M &kp P &kp E &kp L &kp SEMI &kp LS(P) &kp O &kp L &kp Y)
                 MACRO(win_word_del, &kp LC(BSPC))
+                MACRO(tcs_id, &kp N2 &kp N4 &kp N4 &kp N0 &kp N8 &kp N8 &kp N2)
+                MACRO(work_email, &kp A &kp R &kp T &kp I &kp S &kp E &kp DOT &kp B &kp R &kp O &kp W &kp N &kp DQT &kp N &kp A &kp T &kp I &kp O &kp N &kp W &kp I &kp D &kp E &kp DOT &kp C &kp O &kp DOT &kp U &kp K)
 //                MACRO(mac_word_del, &kp LA(BSPC))
 //                MACRO(nbs_id, &kp HASH &kp HASH)
 	};
@@ -167,8 +169,8 @@ name: name##_macro {                  \
 //                             |     LGUI    |             |     RET     |              | (TO)Cursor  |  (TO)Numpad | (TO)Symbols |
 
                         bindings = <
-&kp LC(LG(Q))   &none           &none           &none           &none           &none           &none           &none           &none           &none
-&sk LSHFT       &sk LALT        &sk LCTRL       &sk LGUI        &none           &to FN_KEYS     &to SYSTEM      &none           &none           &none
+&kp LC(LG(Q))   &none           &none           &none           &caps_word      &win_word_del   &none           &none           &none           &none
+&none           &none           &tcs_id         &work_email     &none           &to FN_KEYS     &to SYSTEM      &none           &none           &none
 &kp LG(L)       &nbs_id         &nbs_pw         &kp LC(LA(DEL)) &none           &none           &to CUR         &none           &none           &none
                                 &none           &to DEFAULT     &none           &to CUR         &to NUMPAD      &to SYMBOL
                         >;
