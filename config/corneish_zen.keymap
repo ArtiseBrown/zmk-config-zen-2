@@ -185,9 +185,9 @@ name: name##_macro {                  \
 //                             |     LGUI    |             |     RET     |              |     ---     |             |     RALT    |
 
                         bindings = <
-&kp ESC         &kp TAB         &none           &none           &caps_word              &win_word_del   &none           &kp UP          &none           &none
-&sk LSHFT       &sk LALT        &sk LCTRL       &sk LGUI        &none                   &kp PG_UP       &kp LEFT        &kp DOWN        &kp RIGHT       &kp HOME
-&kp LC(Z)       &kp LC(X)       &kp LC(C)       &kp LC(V)       &kp LC(Y)               &kp PG_DN       &none           &none           &none           &kp END
+&kp ESC         &kp TAB         &none           &none           &caps_word              &win_word_del   &none           &kp F5          &none           &none
+&sk LSHFT       &sk LALT        &sk LCTRL       &sk LGUI        &none                   &none           &kp LEFT        &kp UP          &kp DOWN       &kp RIGHT
+&kp LC(Z)       &kp LC(X)       &kp LC(C)       &kp LC(V)       &kp LC(Y)               &none           &kp HOME        &kp PG_UP       &kp PG_DN       &kp END
                                 &kp LGUI        &to DEFAULT     &kp RET                 &none           &trans          &kp RALT
                         >;
                 };
