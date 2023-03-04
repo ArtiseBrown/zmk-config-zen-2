@@ -62,6 +62,14 @@ combo_##name {                        \
             bindings = <&kp COMMA>, <&kp SEMI>, <&kp LT>;
                 };
 
+        td_exclame: tap_dance_exclame {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_EXCLAME";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp QMARK>, <&kp EXCLAMATION>, <&kp FSLH>;
+                };
+
         td_period: tap_dance_period {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_PERIOD";
@@ -157,7 +165,7 @@ name: name##_macro {                  \
                         bindings = <
 &mt ESC Q       &mt TAB W       &mt LS(TAB) F   &mt LS(F10) P   &mt F5 B        &mt LC(BSPC) J  &kp L           &kp U           &kp Y           &mt DQT SQT
 &hm LSHFT A     &hm LALT R      &hm LCTRL S     &hm LGUI T      &kp G           &kp M           &hm LGUI N      &hm LCTRL E     &hm LALT I      &hm LSHFT  O
-&mt LC(Z) Z     &mt LC(X) X     &mt LC(C) C     &mt LC(V) D     &mt LC(Y) V     &kp K           &kp H           &td_comma       &td_period      &mt FSLH QMARK
+&mt LC(Z) Z     &mt LC(X) X     &mt LC(C) C     &mt LC(V) D     &mt LC(Y) V     &kp K           &kp H           &td_comma       &td_period      &td_exclame
                                 &mo SYSTEM      &kp LSHFT       &lt LOGIN SPACE &lt CUR BSPC    MO_TO(NUMPAD)   MO_TO(SYMBOL)
                         >;
                 };
