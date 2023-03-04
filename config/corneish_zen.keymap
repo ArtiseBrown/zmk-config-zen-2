@@ -99,15 +99,15 @@ combo_##name {                        \
 	combos {
 		compatible = "zmk,combos";
                 // Windows
-		COMBO(vol_up, &kp C_VOL_UP,  9 19)
-		COMBO(vol_dn, &kp C_VOL_DN, 19 29)
-                // symbols
-                COMBO(l_bracket, &kp LPAR, 4 27)
-                COMBO(r_bracket, &kp RPAR, 4 28)
-		// invoke macros
+		COMBO(vol_up, &kp C_VOL_UP,  9 19) // 'o
+		COMBO(vol_dn, &kp C_VOL_DN, 19 29) // o?
+                // Symbols
+                COMBO(l_bracket, &kp LPAR, 4 27) // B<
+                COMBO(r_bracket, &kp RPAR, 4 28) // B>
+		// Invoke macros
 		COMBO(nbs_id, &nbs_id, 18 23) // ID
 		COMBO(tcs_id, &tcs_id, 13 22) // TC
-                COMBO(nbs_work_email, &nbs_work_email, 15 17) // EM
+                COMBO(nbs_email, &nbs_email, 15 17) // EM
 		COMBO(nbs_pw, &nbs_pw, 3 1) // PW
 //                COMBO() // LO
 //                COMBO() // UL
@@ -115,8 +115,7 @@ combo_##name {                        \
 
         
 };
-
-
+ 
 #define MACRO(name, keys)             \
 name: name##_macro {                  \
 	label = #name;                    \
@@ -134,7 +133,7 @@ name: name##_macro {                  \
                 // NBS
                 MACRO(nbs_id, &kp C &kp N5 &kp N0 &kp N1 &kp N3 &kp N0 &kp N5)
                 MACRO(nbs_pw, &kp LS(C) &kp O &kp M &kp P &kp E &kp L &kp SEMI &kp LS(P) &kp O &kp L &kp Y)
-                MACRO(nbs_work_email, &kp A &kp R &kp T &kp I &kp S &kp E &kp DOT &kp B &kp R &kp O &kp W &kp N &kp DQT &kp N &kp A &kp T &kp I &kp O &kp N &kp W &kp I &kp D &kp E &kp DOT &kp C &kp O &kp DOT &kp U &kp K)
+                MACRO(nbs_email, &kp A &kp R &kp T &kp I &kp S &kp E &kp DOT &kp B &kp R &kp O &kp W &kp N &kp DQT &kp N &kp A &kp T &kp I &kp O &kp N &kp W &kp I &kp D &kp E &kp DOT &kp C &kp O &kp DOT &kp U &kp K)
                 // TCS
                 MACRO(tcs_id, &kp N2 &kp N4 &kp N4 &kp N0 &kp N8 &kp N8 &kp N2)
                 // Windows
@@ -154,7 +153,7 @@ name: name##_macro {                  \
 // |   Q   |   W   |   F   |   P   |   B   |              |   J   |   L   |   U   |   Y   |   '   |
 // |   A   |   R   |   S   |   T   |   G   |              |   M   |   N   |   E   |   I   |   O   |
 // |   Z   |   X   |   C   |   D   |   V   |              |   K   |   H   |   ,   |   .   |   ?   |
-//             | GUI | LWR | SPC |              | BKSPC | RSE  | ALT |
+//                 |  GUI  |  LWR  |  SPC  |              | BKSPC |  RSE  |  ALT  |
                         bindings = <
 &mt ESC Q       &mt TAB W       &mt LS(TAB) F   &mt LS(F10) P   &mt F5 B        &mt LC(BSPC) J  &kp L           &kp U           &kp Y           &mt DQT SQT
 &hm LSHFT A     &hm LALT R      &hm LCTRL S     &hm LGUI T      &kp G           &kp M           &hm LGUI N      &hm LCTRL E     &hm LALT I      &hm LSHFT  O
@@ -166,15 +165,15 @@ name: name##_macro {                  \
                 LOGIN {
                         label = "LOGIN";
 // ------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |  Mac Lock   |     TAB     |     ---     |     ---     |     ---     |              |     ---     |     ---     |     ---     |     ---     |     ---     |
-// |    LSHFT    |     LALT    |    LCTRL    |     LGUI    |     ---     |              | (TO)Fn keys |  (TO)System |  (TO)Media  |     ---     |     ---     |
-// |  Win Lock   |   Win ID    |    Win PW   |  Win Login  |     Redo    |              |     ---     |  (TO)Cursor |  (TO)Mouse  |     ---     |     ---     |
-//                             |     LGUI    |             |     RET     |              | (TO)Cursor  |  (TO)Numpad | (TO)Symbols |
+// |  Mac Lock   |  Mac Login  |   Mac ID    |    Mac PW   |  Caps word  |              |   Word del  |     ---     |     ---     |     ---     |     ---     |
+// |     ---     |     ---     |   TCS ID    |   NBS Email |     ---     |              | (TO)Fn keys |  (TO)System |  (TO)Media  |     ---     |     ---     |
+// |  Win Lock   |  Win Login  |   NBS ID    |    NBS PW   |     Redo    |              |     ---     |  (TO)Cursor |  (TO)Mouse  |     ---     |     ---     |
+//                             |    LGUI     |    DEFAULT  |     RET     |              | (TO)Cursor  |  (TO)Numpad | (TO)Symbols |
 
                         bindings = <
 &kp LC(LG(Q))   &none           &none           &none           &caps_word      &win_word_del   &none           &none           &none           &none
-&none           &none           &tcs_id         &nbs_work_email &none           &to FN_KEYS     &to SYSTEM      &none           &none           &none
-&kp LG(L)       &nbs_id         &nbs_pw         &kp LC(LA(DEL)) &none           &none           &to CUR         &none           &none           &none
+&none           &none           &tcs_id         &nbs_email      &none           &to FN_KEYS     &to SYSTEM      &none           &none           &none
+&kp LG(L)       &kp LC(LA(DEL)) &nbs_id         &nbs_pw         &none           &none           &to CUR         &none           &none           &none
                                 &none           &to DEFAULT     &none           &to CUR         &to NUMPAD      &to SYMBOL
                         >;
                 };
@@ -189,7 +188,7 @@ name: name##_macro {                  \
 
                         bindings = <
 &kp ESC         &kp TAB         &none           &none           &caps_word              &win_word_del   &none           &kp F5          &none           &none
-&sk LSHFT       &sk LALT        &sk LCTRL       &sk LGUI        &none                   &none           &kp LEFT        &kp UP          &kp DOWN       &kp RIGHT
+&sk LSHFT       &sk LALT        &sk LCTRL       &sk LGUI        &none                   &none           &kp LEFT        &kp UP          &kp DOWN        &kp RIGHT
 &kp LC(Z)       &kp LC(X)       &kp LC(C)       &kp LC(V)       &kp LC(Y)               &none           &kp HOME        &kp PG_UP       &kp PG_DN       &kp END
                                 &kp LGUI        &to DEFAULT     &kp RET                 &none           &trans          &kp RALT
                         >;
