@@ -99,7 +99,7 @@ combo_##name {                        \
 	combos {
 		compatible = "zmk,combos";
                 // Windows
-		COMBO(vol_up, &kp C_VOL_UP,  9 19) // 'o
+		COMBO(vol_up, &kp C_VOL_UP, 9 19) // 'o
 		COMBO(vol_dn, &kp C_VOL_DN, 19 29) // o?
                 // Symbols
                 COMBO(l_bracket, &kp LPAR, 4 27) // B<
@@ -214,15 +214,15 @@ name: name##_macro {                  \
                 SYMBOL {
                         label = "SYMBOL";
 // --------------------------------------------------------------------------------------------------------------------
-// |    !    |    @    |    £€   |    $    |    %    |              |    *    |   < >   |   \ /   |    =    |    +    |
-// |    ^    |    &    |    *    |  # Win  |  # Mac  |              |    /    |   ( )   |   [ ]   |    _    |    -    |
-// |  N-dash |  M-dash |    "    |    `    |    ~    |              |    |    |   { }   |    ;    |    :    |         |
+// |    !    |    @    |    £€   |    $    |    %    |              |    *    |   ---   |   \ /   |    =    |    +    |
+// |    ^    |    &    |    *    |  # Win  |  # Mac  |              |    /    |   ---   |   ---   |    _    |    -    |
+// |  N-dash |  M-dash |    "    |    `    |    ~    |              |    |    |   ---   | ( < [ { | ) > ] } |   ---   |
 //                     |   GUI   |         |   SPC   |              |   ENT   |         |   ALT   |
 
                         bindings = <
-&kp EXCL        &kp AT          &mt LA(N2) POUND       &kp DLLR        &kp PRCNT               &kp ASTRK       &mt GT LT       &mt FSLH BSLH   &kp EQUAL       &kp PLUS
-&kp CARET       &kp AMPS        &kp ASTRK               &trans          &trans                  &kp FSLH        &mt RPAR LPAR   &mt RBKT LBKT   &kp UNDER       &kp MINUS
-&trans          &trans          &kp DQT                 &kp GRAVE       &kp TILDE               &kp PIPE        &mt RBRC LBRC   &td_lbrakets    &td_rbrakets       &none
+&kp EXCL        &kp AT          &mt LA(N2) POUND        &kp DLLR        &kp PRCNT               &kp ASTRK       &none           &mt FSLH BSLH   &kp EQUAL       &kp PLUS
+&kp CARET       &kp AMPS        &kp ASTRK               &none           &none                   &kp FSLH        &none           &none           &kp UNDER       &kp MINUS
+&none           &none           &kp DQT                 &kp GRAVE       &kp TILDE               &kp PIPE        &none           &td_lbrakets    &td_rbrakets    &none
                                 &kp LGUI                &to DEFAULT     &kp SPACE               &kp RET         &trans          &kp RALT
                         >;
                 };
@@ -252,10 +252,10 @@ name: name##_macro {                  \
 //                 |  GUI  |       |  SPC  |              |  ENT  |       |  ALT  |
 
                         bindings = <
-&kp N1          &kp N2          &kp N3       &kp N4             &kp N5          &kp N6          &kp N7          &kp N8          &kp N9          &kp N0
-&bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2 &bt BT_SEL 3       &bt BT_SEL 4    &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &trans
-&bt BT_CLR      &trans          &trans       &out OUT_TOG       &trans          &trans          &trans          &trans          &trans          &trans
-                                &kp LGUI     &to DEFAULT        &kp SPACE       &kp RET         &trans          &kp RALT
+&none           &none           &none           &none           &none                   &none           &none           &none           &none           &none
+&bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4            &none           &kp C_MUTE      &kp C_VOL_UP    &kp C_VOL_DN    &trans
+&bt BT_CLR      &trans          &trans          &out OUT_TOG    &trans                  &trans          &trans          &trans          &trans          &trans
+                                &kp LGUI        &to DEFAULT     &kp SPACE               &kp RET         &trans          &kp RALT
                         >;
                 };
 
