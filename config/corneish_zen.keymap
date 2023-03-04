@@ -108,7 +108,7 @@ combo_##name {                        \
 		COMBO(vim_s,  &vim_s,  20 21)
 		COMBO(dir_up, &dir_up, 28 29)
                 COMBO(work_email, &work_email, 15 17)
-                COMBO()
+//                COMBO()
 	};
 
         
