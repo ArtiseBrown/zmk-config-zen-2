@@ -98,17 +98,19 @@ combo_##name {                        \
 
 	combos {
 		compatible = "zmk,combos";
+                // Windows
 		COMBO(vol_up, &kp C_VOL_UP,  9 19)
 		COMBO(vol_dn, &kp C_VOL_DN, 19 29)
                 // symbols
                 COMBO(l_bracket, &kp LPAR, 4 27)
                 COMBO(r_bracket, &kp RPAR, 4 28)
 		// invoke macros
-		COMBO(vim_q,  &vim_q,   0  1)
-		COMBO(vim_s,  &vim_s,  20 21)
-		COMBO(dir_up, &dir_up, 28 29)
-                COMBO(work_email, &work_email, 15 17)
-//                COMBO()
+		COMBO(nbs_id, &nbs_id, 18 23) // ID
+		COMBO(tcs_id, &tcs_id, 13 22) // TC
+                COMBO(nbs_work_email, &nbs_work_email, 15 17) // EM
+		COMBO(nbs_pw, &nbs_pw, 3 1) // PW
+//                COMBO() // LO
+//                COMBO() // UL
 	};
 
         
@@ -129,16 +131,16 @@ name: name##_macro {                  \
 
 / {
 	macros {
-		MACRO(vim_q,  &kp COLON &kp Q &kp EXCL)
-		MACRO(vim_s,  &kp COLON &kp W &kp Q)
-		MACRO(dir_up, &kp DOT &kp DOT &kp FSLH)
+                // NBS
                 MACRO(nbs_id, &kp C &kp N5 &kp N0 &kp N1 &kp N3 &kp N0 &kp N5)
                 MACRO(nbs_pw, &kp LS(C) &kp O &kp M &kp P &kp E &kp L &kp SEMI &kp LS(P) &kp O &kp L &kp Y)
-                MACRO(win_word_del, &kp LC(BSPC))
+                MACRO(nbs_work_email, &kp A &kp R &kp T &kp I &kp S &kp E &kp DOT &kp B &kp R &kp O &kp W &kp N &kp DQT &kp N &kp A &kp T &kp I &kp O &kp N &kp W &kp I &kp D &kp E &kp DOT &kp C &kp O &kp DOT &kp U &kp K)
+                // TCS
                 MACRO(tcs_id, &kp N2 &kp N4 &kp N4 &kp N0 &kp N8 &kp N8 &kp N2)
-                MACRO(work_email, &kp A &kp R &kp T &kp I &kp S &kp E &kp DOT &kp B &kp R &kp O &kp W &kp N &kp DQT &kp N &kp A &kp T &kp I &kp O &kp N &kp W &kp I &kp D &kp E &kp DOT &kp C &kp O &kp DOT &kp U &kp K)
-//                MACRO(mac_word_del, &kp LA(BSPC))
-//                MACRO(nbs_id, &kp HASH &kp HASH)
+                // Windows
+                MACRO(win_word_del, &kp LC(BSPC))
+                // Mac OS
+                MACRO(mac_word_del, &kp LA(BSPC))
 	};
 };
 
@@ -171,7 +173,7 @@ name: name##_macro {                  \
 
                         bindings = <
 &kp LC(LG(Q))   &none           &none           &none           &caps_word      &win_word_del   &none           &none           &none           &none
-&none           &none           &tcs_id         &work_email     &none           &to FN_KEYS     &to SYSTEM      &none           &none           &none
+&none           &none           &tcs_id         &nbs_work_email &none           &to FN_KEYS     &to SYSTEM      &none           &none           &none
 &kp LG(L)       &nbs_id         &nbs_pw         &kp LC(LA(DEL)) &none           &none           &to CUR         &none           &none           &none
                                 &none           &to DEFAULT     &none           &to CUR         &to NUMPAD      &to SYMBOL
                         >;
