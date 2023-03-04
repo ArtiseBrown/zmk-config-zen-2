@@ -181,13 +181,13 @@ name: name##_macro {                  \
                 CUR {
                         label = "CURSOR";
 // ------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |     ESC     |     TAB     |     ---     |     ---     |  Caps word  |              |   Word del  |     ---     |     Up      |     ---     |     ---     |
-// |    LSHFT    |    LALT     |    LCTRL    |     LGUI    |     ---     |              |    PG UP    |     Left    |     Down    |    Right    |     Home    |
-// |     Undo    |     Cut     |     Copy    |    Paste    |     Redo    |              |    PG DN    |     ---     |     ---     |     ---     |     End     |
-//                             |     LGUI    |             |     RET     |              |     ---     |             |     RALT    |
+// |     ESC     |     F-TAB   |    B-TAB    |     ---     |  Caps word  |              |   Word del  |   Prev Tab  | Tab Refresh |   Next Tab  |     ---     |
+// |    LSHFT    |     LALT    |    LCTRL    |     LGUI    |     ---     |              |  Switch app |     Left    |     Up      |     Down    |    Right    |
+// |     Undo    |     Cut     |     Copy    |    Paste    |     Redo    |              |    Search   |     Home    |    PG UP    |    PG DN    |     End     |
+//                             |     LGUI    |     ---     |     RET     |              |     ---     |     ---     |     RALT    |
 
                         bindings = <
-&kp ESC         &kp TAB         &none           &none           &caps_word              &win_word_del   &none           &kp F5          &none           &none
+&kp ESC         &kp TAB         &kp LS(TAB)     &none           &caps_word              &win_word_del   &kp LC(TAB)     &kp F5          &kp LC(LS(TAB)) &none
 &sk LSHFT       &sk LALT        &sk LCTRL       &sk LGUI        &none                   &none           &kp LEFT        &kp UP          &kp DOWN        &kp RIGHT
 &kp LC(Z)       &kp LC(X)       &kp LC(C)       &kp LC(V)       &kp LC(Y)               &none           &kp HOME        &kp PG_UP       &kp PG_DN       &kp END
                                 &kp LGUI        &to DEFAULT     &kp RET                 &none           &trans          &kp RALT
