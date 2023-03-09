@@ -12,7 +12,7 @@
 #define SYSTEM  6
 
 #define MO_TO(layer) &mo_to layer layer   // Macro to apply momentary-layer-on-hold/go-to-layer-on-tap
-#define MEH LA(LS(LC))
+#define MEH LA(LS(LCTRL)) // 
 
 
 / {
