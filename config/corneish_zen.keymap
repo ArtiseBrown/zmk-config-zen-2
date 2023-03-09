@@ -198,7 +198,7 @@ name: name##_macro {                  \
                         bindings = <
 &kp ESC         &kp TAB         &kp LS(TAB)     &none           &caps_word              &win_word_del   &kp LC(LS(TAB)) &kp F5          &kp LC(TAB)     &none
 &sk LSHFT       &sk LALT        &sk LCTRL       &sk LGUI        &none                   &none           &kp LEFT        &kp UP          &kp DOWN        &kp RIGHT
-&kp LC(Z)       &kp LC(X)       &kp LC(C)       &kp LC(V)       &kp LC(Y)               &none           &kp HOME        &kp PG_UP       &kp PG_DN       &kp END
+&kp LC(Z)       &kp LC(X)       &kp LC(C)       &kp LC(V)       &mt MEH LC(Y)           &none           &kp HOME        &kp PG_UP       &kp PG_DN       &kp END
                                 &kp LGUI        &to DEFAULT     &kp RET                 &none           &trans          &kp RALT
                         >;
                 };
