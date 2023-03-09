@@ -170,7 +170,7 @@ name: name##_macro {                  \
                                 &mo SYSTEM      &kp LSHFT       &lt LOGIN SPACE &lt CUR BSPC    MO_TO(NUMPAD)   MO_TO(SYMBOL)
                         >;
                 };
-mneio
+
                 LOGIN {
                         label = "LOGIN";
 // ------------------------------------------------------------------------------------------------------------------------------------------------------------
