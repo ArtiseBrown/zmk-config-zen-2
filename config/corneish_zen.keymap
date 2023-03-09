@@ -12,6 +12,7 @@
 #define SYSTEM  6
 
 #define MO_TO(layer) &mo_to layer layer   // Macro to apply momentary-layer-on-hold/go-to-layer-on-tap
+#define MEH LA(LS(LC))
 
 
 / {
@@ -163,23 +164,23 @@ name: name##_macro {                  \
 // |   Z   |   X   |   C   |   D   |   V   |              |   K   |   H   |   ,   |   .   |   ?   |
 //                 |  GUI  |  LWR  |  SPC  |              | BKSPC |  RSE  |  ALT  |
                         bindings = <
-&mt ESC Q       &mt TAB W       &mt LS(TAB) F   &mt LS(F10) P   &mt F5 B        &mt LC(BSPC) J  &kp L           &kp U           &kp Y           &mt DQT SQT
+&mt ESC Q       &mt TAB W       &mt LS(TAB) F   &mt LS(F10) P   &kp B           &mt LC(BSPC) J  &kp L           &mt F5 U           &kp Y           &mt DQT SQT
 &hm LSHFT A     &hm LALT R      &hm LCTRL S     &hm LGUI T      &kp G           &kp M           &hm LGUI N      &hm LCTRL E     &hm LALT I      &hm LSHFT  O
 &mt LC(Z) Z     &mt LC(X) X     &mt LC(C) C     &mt LC(V) D     &mt LC(Y) V     &kp K           &kp H           &td_comma       &td_period      &td_exclame
                                 &mo SYSTEM      &kp LSHFT       &lt LOGIN SPACE &lt CUR BSPC    MO_TO(NUMPAD)   MO_TO(SYMBOL)
                         >;
                 };
-
+mneio
                 LOGIN {
                         label = "LOGIN";
 // ------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |  Mac Lock   |  Mac Login  |   Mac ID    |    Mac PW   |  Caps word  |              |   Word del  |     ---     |     ---     |     ---     |     ---     |
+// |  Mac Lock   |  Mac Login  |   Mac ID    |    Mac PW   |  Caps word  |              |   Word del  |     ---     | Tab Refresh |     ---     |     ---     |
 // |     ---     |     ---     |   TCS ID    |   NBS Email |     ---     |              | (TO)Fn keys |  (TO)System |  (TO)Media  |     ---     |     ---     |
 // |  Win Lock   |  Win Login  |   NBS ID    |    NBS PW   |     Redo    |              |     ---     |  (TO)Cursor |  (TO)Mouse  |     ---     |     ---     |
 //                             |    LGUI     |    DEFAULT  |     RET     |              | (TO)Cursor  |  (TO)Numpad | (TO)Symbols |
 
                         bindings = <
-&kp LC(LG(Q))   &none           &none           &none           &caps_word      &win_word_del   &none           &none           &none           &none
+&kp LC(LG(Q))   &none           &none           &none           &caps_word      &win_word_del   &none           &kp F5          &none           &none
 &none           &none           &tcs_id         &nbs_email      &none           &to FN_KEYS     &to SYSTEM      &none           &none           &none
 &kp LG(L)       &kp LC(LA(DEL)) &nbs_id         &nbs_pw         &none           &none           &to CUR         &none           &none           &none
                                 &none           &to DEFAULT     &none           &to CUR         &to NUMPAD      &to SYMBOL
